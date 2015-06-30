@@ -1,9 +1,9 @@
 {
   "name": "sui-card",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "dist/",
   "scripts": {
-    "clean:dist": "rimraf **/dist/*",
+    "clean:dist": "rimraf ./dist/*",
     "clean:tmp": "rimraf .tmp/",
 
     "prebuild": "npm run clean:dist -s",

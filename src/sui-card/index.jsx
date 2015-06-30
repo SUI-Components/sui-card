@@ -7,8 +7,14 @@ export default class Card extends React.Component {
     return (
       <div className='sui-card'>
         <CardMedia {...this.props}/>
-        <CardContent {...this.props}/>
+        <CardContent>
+          {this.props.children}
+        </CardContent>
       </div>
     );
   }
 }
+
+Card.propTypes = {
+  children: React.PropTypes.arrayOf(React.PropTypes.component)
+};

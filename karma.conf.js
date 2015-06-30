@@ -1,11 +1,11 @@
 module.exports = function (config) {
   config.set({
-    browsers: [ 'PhantomJS' /*, 'Chrome'*/ ],
+    browsers: ['PhantomJS' /*, 'Chrome'*/],
 
-    frameworks: [ 'mocha' ],
+    frameworks: ['mocha'],
 
     preprocessors: {
-      'test/**/*-test.js': [ 'webpack' ]
+      'test/**/*-test.js': ['webpack']
     },
 
     files: [
@@ -21,7 +21,7 @@ module.exports = function (config) {
         loaders: [
           {
             test: /\.jsx?$/,
-            loaders: [ 'babel-loader' ],
+            loaders: ['babel-loader'],
             exclude: /(node_modules)/
           }
         ]
@@ -32,6 +32,6 @@ module.exports = function (config) {
       noInfo: true
     },
 
-    reporters: [ 'spec' ]
+    reporters: ['spec']
   });
 };
