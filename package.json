@@ -1,6 +1,6 @@
 {
-  "name": "sui-card",
-  "version": "1.0.0",
+  "name": "@schibstedspain/sui-card",
+  "version": "1.0.1",
   "main": "dist/",
   "scripts": {
     "clean:dist": "rimraf ./dist/*",
