@@ -29,10 +29,11 @@ $ npm run dev
 The sui-card component is basically a block container to load dinamic content inside.
 Example:
 ```
-<sui-card>
-    <CardMedia />
-    <CardContent />
-</Card>
+React.render(<Card
+    cardcontent={'Lorem ipsum dolor sit amet'}
+    multimediaUrl={'http://placehold.it/300x150'}
+  />,
+  document.getElementById('main'));
 ```
 
 It renders a cleared generic `div` element with and increased padding-bottom in screen resolutions smaller than 750px to better fit smaller screens.
