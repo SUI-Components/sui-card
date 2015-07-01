@@ -1,6 +1,6 @@
 {
   "name": "@schibstedspain/sui-card",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "dist/",
   "scripts": {
     "clean:dist": "rimraf ./dist/*",
@@ -10,7 +10,7 @@
     "build": "npm run build:scripts && npm run build:styles",
     "build:scripts": "babel src --out-dir dist",
     "build:styles": "node-sass src/index.scss dist/sui-card.css",
-    "postbuild:styles": "cp dist/sui-card.css dist/sui-card.scss",
+    "postbuild:styles": "cp dist/sui-card.css dist/_sui-card.scss",
     "postinstall": "npm run build",
 
     "lint": "npm run lint:jscs && npm run lint:eslint && npm run lint:css",
