@@ -16,4 +16,6 @@ export default class CardMedia extends React.Component {
   }
 }
 
-CardMedia.propTypes = {multimediaUrl: React.PropTypes.string};
+CardMedia.propTypes = {
+  multimediaUrl: React.PropTypes.string
+};
