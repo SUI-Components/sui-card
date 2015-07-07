@@ -6,7 +6,7 @@ import cx from 'classnames';
 export default class Card extends React.Component {
   render() {
     const classes = cx({
-      'sui-card': true,
+      'sui-Card': true,
       'is-hover': this.props.hover
     });
 
