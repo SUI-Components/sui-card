@@ -13,10 +13,10 @@
     "postbuild:styles": "cp dist/sui-card.css dist/_sui-card.scss",
     "postinstall": "npm run build",
 
-    "lint": "npm run lint:jscs && npm run lint:eslint && npm run lint:css",
+    "lint": "npm run lint:jscs && npm run lint:eslint && npm run lint:sass",
     "lint:jscs": "cat ./{src,test}/**/*.{js,jsx} | jscs",
     "lint:eslint": "eslint --ext=\".js\" --ext=\".jsx\" src/",
-    "lint:css": "node-sass src -o .tmp; rm .tmp/index.css; csslint .tmp",
+    "lint:sass": "scss-lint src/",
     "postlint": "npm run clean:tmp",
 
     "test": "mocha --compilers js:babel/register --recursive",

@@ -4,7 +4,7 @@ import '../src/index.scss';
 
 React.render(
   <Card
-    multimediaUrl={'http://imges.inmofactory.com/inmofactory/documents/1/98852/7538658/49226769.jpg/300x225/w_0/'}>
+    multimediaUrl={'http://images.inmofactory.com/inmofactory/documents/1/98852/7538658/49226769.jpg/300x225/w_0/'}>
     <div class='content'>
       <p>
         Lorem ipsum dolor sit amet, consectetur
