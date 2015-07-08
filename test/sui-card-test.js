@@ -5,9 +5,9 @@ import Card from '../src/sui-card';
 import CardMedia from '../src/sui-card-media';
 import CardContent from '../src/sui-card-content';
 
-import {createComponent} from './utilities'
+import {createComponent} from './utilities';
 
-describe('sui-card component test suite', function () {
+describe('sui-Card component test suite', function () {
 
   describe('loading', function() {
     it('all components are loaded properly', function () {
@@ -33,7 +33,7 @@ describe('sui-card component test suite', function () {
     });
 
     it('has the proper class for container', function() {
-      expect(cardContent.props.className).toBe('sui-card__content');
+      expect(cardContent.props.className).toBe('sui-Card-content');
     });
   });
 
@@ -68,7 +68,7 @@ describe('sui-card component test suite', function () {
     });
 
     it('has the proper class for media container', function() {
-      expect(cardMedia.props.className).toBe('sui-card__media');
+      expect(cardMedia.props.className).toBe('sui-Card-media');
     });
   });
 
@@ -84,7 +84,7 @@ describe('sui-card component test suite', function () {
     });
 
     it('shows a default picture', function() {
-      expect(cardMedia.props.className).toBe('sui-card__media--no-picture');
+      expect(cardMedia.props.className).toBe('sui-Card-media sui-Card-media--no-picture');
     });
   });
 
@@ -104,7 +104,7 @@ describe('sui-card component test suite', function () {
     });
 
     it('has the proper class name', function() {
-      expect(card.props.className).toBe('sui-card');
+      expect(card.props.className).toBe('sui-Card');
     });
   });
 

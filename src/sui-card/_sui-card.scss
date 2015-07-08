@@ -1,10 +1,10 @@
-.sui-card {
-  background-color: #fff;
-  transition: all .3s ease;
+.sui-Card {
+  background-color: $c-bg-light;
   padding-bottom: 10px;
+  transition: box-shadow .3s ease;
 
   &:hover,
-  &.is-hover {
-    box-shadow: 0px 5px 10px #aaa;
+  &.is-Hover {
+    box-shadow: 0 5px 10px $c-gray-lighter;
   }
 }

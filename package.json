@@ -4,7 +4,6 @@
   "main": "dist/",
   "scripts": {
     "clean:dist": "rimraf ./dist/*",
-    "clean:tmp": "rimraf .tmp/",
 
     "prebuild": "npm run clean:dist -s",
     "build": "npm run build:scripts && npm run build:styles",
@@ -13,11 +12,10 @@
     "postbuild:styles": "cp dist/sui-card.css dist/_sui-card.scss",
     "postinstall": "npm run build",
 
-    "lint": "npm run lint:jscs && npm run lint:eslint && npm run lint:css",
+    "lint": "npm run lint:jscs && npm run lint:eslint && npm run lint:sass",
     "lint:jscs": "cat ./{src,test}/**/*.{js,jsx} | jscs",
     "lint:eslint": "eslint --ext=\".js\" --ext=\".jsx\" src/",
-    "lint:css": "node-sass src -o .tmp; rm .tmp/index.css; csslint .tmp",
-    "postlint": "npm run clean:tmp",
+    "lint:sass": "scss-lint src/",
 
     "test": "mocha --compilers js:babel/register --recursive",
     "test:watch": "npm run test -- -w test src --watch-extensions jsx",
@@ -45,12 +43,12 @@
   },
   "devDependencies": {
     "@schibstedspain/frontend-pre-commit-rules": "latest",
+    "@schibstedspain/theme-sui": "latest",
     "babel": "^5.5.6",
     "babel-eslint": "~3.1.14",
     "babel-jscs": "^1.0.1",
     "babel-loader": "^5.1.4",
     "css-loader": "^0.14.5",
-    "csslint": "^0.10.0",
     "eslint": "~0.23.0",
     "eslint-plugin-react": "~2.5.0",
     "expect": "^1.6.0",

@@ -4,8 +4,8 @@ import cx from 'classnames';
 export default class CardMedia extends React.Component {
   render() {
     const classes = cx({
-      'sui-card__media': this.props.multimediaUrl,
-      'sui-card__media--no-picture': !this.props.multimediaUrl
+      'sui-Card-media': true,
+      'sui-Card-media--no-picture': !this.props.multimediaUrl
     });
 
     return (
@@ -16,6 +16,4 @@ export default class CardMedia extends React.Component {
   }
 }
 
-CardMedia.propTypes = {
-  multimediaUrl: React.PropTypes.string
-};
+CardMedia.propTypes = {multimediaUrl: React.PropTypes.string};
