@@ -84,7 +84,7 @@ describe('sui-Card component test suite', function () {
     });
 
     it('shows a default picture', function() {
-      expect(cardMedia.props.className).toBe('sui-Card-media--no-picture');
+      expect(cardMedia.props.className).toBe('sui-Card-media sui-Card-media--no-picture');
     });
   });
 
