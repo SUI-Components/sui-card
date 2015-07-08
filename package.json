@@ -16,7 +16,6 @@
     "lint:jscs": "cat ./{src,test}/**/*.{js,jsx} | jscs",
     "lint:eslint": "eslint --ext=\".js\" --ext=\".jsx\" src/",
     "lint:sass": "scss-lint src/",
-    "postlint": "npm run clean:tmp",
 
     "test": "mocha --compilers js:babel/register --recursive",
     "test:watch": "npm run test -- -w test src --watch-extensions jsx",
