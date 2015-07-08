@@ -45,14 +45,26 @@ $ npm run build
 ```
 
 ## Testing
-Run:
+Execute a complete test by running:
 
 ```
 $ npm run test
-````
+```
+In addition, you can run specific test for linting JS and SASS:
+SASS: (SASS linting rules specified in file `.scss-lint.yml`)
+
+```
+$ npm run lint:sass
+```
+JS (JS linting rules specified in file `.jscsrc`)
+
+```
+$ npm run lint:jscs
+```
 
 ## Preview
 - Clone the repo and open `index.html` file inside `docs` folder <br />
 
 ## ToDo
 - Add NPM package
+- Add Github pages demo
