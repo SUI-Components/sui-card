@@ -1,6 +1,6 @@
 {
   "name": "@schibstedspain/sui-card",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "main": "dist/",
   "scripts": {
     "clean:dist": "rm -rf ./dist/*",
@@ -10,7 +10,6 @@
     "build:scripts": "babel src --out-dir dist",
     "build:styles": "node-sass src/index.scss dist/sui-card.css",
     "postbuild:styles": "cp dist/sui-card.css dist/_sui-card.scss",
-    "postinstall": "npm run build",
 
     "lint": "npm run lint:jscs && npm run lint:eslint && npm run lint:sass",
     "lint:jscs": "cat ./{src,test}/**/*.{js,jsx} | jscs",
