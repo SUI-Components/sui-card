@@ -1,9 +1,9 @@
 {
   "name": "@schibstedspain/sui-card",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "dist/",
   "scripts": {
-    "clean:dist": "rimraf ./dist/*",
+    "clean:dist": "rm -rf ./dist/*",
 
     "prebuild": "npm run clean:dist -s",
     "build": "npm run build:scripts && npm run build:styles",
@@ -59,7 +59,6 @@
     "node-sass": "^3.1.2",
     "opener": "^1.4.1",
     "react-hot-loader": "^1.2.7",
-    "rimraf": "^2.4.0",
     "sass-loader": "^1.0.2",
     "style-loader": "^0.12.3",
     "webpack": "^1.9.11",
