@@ -1,7 +1,7 @@
 .sui-Card {
+  transition: box-shadow .3s ease;
   background-color: $c-bg-light;
   padding-bottom: 10px;
-  transition: box-shadow .3s ease;
 
   &:hover,
   &.is-Hover {

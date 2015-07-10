@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@schibstedspain/frontend-pre-commit-rules": "latest",
-    "@schibstedspain/theme-sui": "latest",
+    "@schibstedspain/theme-basic": "latest",
     "babel": "^5.5.6",
     "babel-eslint": "~3.1.14",
     "babel-jscs": "^1.0.1",
