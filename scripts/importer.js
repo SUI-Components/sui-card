@@ -21,6 +21,6 @@ function recursiveFind(url) {
   if (!fs.existsSync(folder)) {
     return recursiveFind(path.join('../', url));
   } else {
-    return url;
+    return path.join('../node_modules', url);
   }
 }
