@@ -1,6 +1,6 @@
 {
   "name": "@schibstedspain/sui-card",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "main": "dist/",
   "scripts": {
     "clean:dist": "rm -rf ./dist/*",
