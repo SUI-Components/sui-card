@@ -26,7 +26,7 @@
 
     "predoc": "npm run clean:dist",
     "doc": "npm run doc:build",
-    "doc:build": "webpack --config webpack.doc.config.js",
+    "doc:build": "gh-pages -d docs",
     "postdoc": "cp -r docs/ ."
   },
   "repository": {
