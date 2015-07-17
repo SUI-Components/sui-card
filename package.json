@@ -1,6 +1,6 @@
 {
   "name": "@schibstedspain/sui-card",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "main": "dist/",
   "scripts": {
     "clean:dist": "rm -rf ./dist/*",
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:scm-spain/sui-card.git"
+    "url": "git@github.com:SUI-Components/sui-card.git"
   },
   "pre-commit": [
     "lint",
