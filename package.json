@@ -1,6 +1,6 @@
 {
   "name": "@schibstedspain/sui-card",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "main": "dist/",
   "scripts": {
     "clean:dist": "rm -rf ./dist/*",
@@ -24,10 +24,9 @@
     "dev:serve": "webpack-dev-server --devtool eval --progress --colors --content-base docs/",
     "dev:open": "opener http://localhost:8080",
 
-    "predoc": "npm run clean:dist",
+    "predoc": "webpack --config webpack.doc.config.js",
     "doc": "npm run doc:build",
-    "doc:build": "gh-pages -d docs",
-    "postdoc": "cp -r docs/ ."
+    "doc:build": "gh-pages -d docs"
   },
   "repository": {
     "type": "git",
@@ -52,6 +51,7 @@
     "eslint": "~0.23.0",
     "eslint-plugin-react": "~2.5.0",
     "expect": "^1.6.0",
+    "gh-pages": "^0.3.1",
     "jscs": "~1.13.1",
     "lodash": "~3.9.3",
     "mocha": "^2.2.5",
