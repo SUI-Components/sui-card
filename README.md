@@ -62,9 +62,12 @@ JS (JS linting rules specified in file `.jscsrc`)
 $ npm run lint:jscs
 ```
 
+## NPM
+- The SUI-Card component is available as a NPM package [here](https://www.npmjs.com/package/@schibstedspain/sui-card):
+- `npm install @schibstedspain/sui-card`
+
 ## Preview
 - Clone the repo and open `index.html` file inside `docs` folder <br />
 
 ## ToDo
-- Add NPM package
 - Add Github pages demo
