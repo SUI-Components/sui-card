@@ -67,6 +67,7 @@ $ npm run lint:jscs
 - `npm install @schibstedspain/sui-card`
 
 ## Preview
+- Checkout the `gh-pages` demo page: [http://sui-components.github.io/sui-card/](http://sui-components.github.io/sui-card/)
 - Clone the repo and open `index.html` file inside `docs` folder <br />
 
 ## ToDo
