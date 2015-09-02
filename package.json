@@ -12,8 +12,7 @@
     "postdist:styles": "cp dist/sui-card.css dist/_sui-card.scss",
     "prepublish": "npm run dist",
 
-    "lint": "npm run lint:jscs && npm run lint:eslint && npm run lint:sass",
-    "lint:jscs": "cat ./{src,test}/**/*.{js,jsx} | jscs",
+    "lint": "npm run lint:eslint && npm run lint:sass",
     "lint:eslint": "eslint --ext=\".js\" --ext=\".jsx\" src/",
     "lint:sass": "scss-lint src/",
 
@@ -52,7 +51,6 @@
     "eslint-plugin-react": "~2.5.0",
     "expect": "^1.6.0",
     "gh-pages": "^0.3.1",
-    "jscs": "~1.13.1",
     "lodash": "~3.9.3",
     "mocha": "^2.2.5",
     "node-libs-browser": "^0.5.2",
