@@ -5,12 +5,12 @@
   "scripts": {
     "clean:dist": "rm -rf ./dist/*",
 
-    "prebuild": "npm run clean:dist -s",
-    "build": "npm run build:scripts && npm run build:styles",
-    "build:scripts": "babel src --out-dir dist",
-    "build:styles": "node-sass src/index.scss dist/sui-card.css --importer ./scripts/importer.js",
-    "postbuild:styles": "cp dist/sui-card.css dist/_sui-card.scss",
-    "postinstall": "npm run build",
+    "predist": "npm run clean:dist -s",
+    "dist": "npm run dist:scripts && npm run dist:styles",
+    "dist:scripts": "babel src --out-dir dist",
+    "dist:styles": "node-sass src/index.scss dist/sui-card.css --importer ./scripts/importer.js",
+    "postdist:styles": "cp dist/sui-card.css dist/_sui-card.scss",
+    "prepublish": "npm run dist",
 
     "lint": "npm run lint:eslint && npm run lint:sass",
     "lint:eslint": "eslint --ext=\".js\" --ext=\".jsx\" src/",
@@ -25,7 +25,8 @@
 
     "predoc": "webpack --config webpack.doc.config.js",
     "doc": "npm run doc:build",
-    "doc:build": "gh-pages -d docs"
+    "doc:build": "gh-pages -d docs",
+    "postdoc": "cp -r docs/ ."
   },
   "repository": {
     "type": "git",
