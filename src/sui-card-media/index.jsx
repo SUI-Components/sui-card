@@ -10,10 +10,15 @@ export default class CardMedia extends React.Component {
 
     return (
       <div className={classes}>
-        <img src={this.props.multimediaUrl} />
+        <a href={this.props.url}>
+          <img src={this.props.multimediaUrl}/>
+        </a>
       </div>
     );
   }
 }
 
-CardMedia.propTypes = {multimediaUrl: React.PropTypes.string};
+CardMedia.propTypes = {
+  multimediaUrl: React.PropTypes.string,
+  url: React.PropTypes.string
+};
