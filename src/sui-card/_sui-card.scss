@@ -1,7 +1,6 @@
 .sui-Card {
   background-color: $c-bg-light;
   margin-bottom: 1em;
-  padding-bottom: 10px;
 
   .sui-Card-topContent {
     img {
@@ -10,6 +9,6 @@
   }
 
   .sui-Card-bottomContent {
-    padding: 1em;
+    padding: 0 1em 1em;
   }
 }

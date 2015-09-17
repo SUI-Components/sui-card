@@ -5,7 +5,7 @@ export default class SuiCard extends React.Component {
   renderTop(){
     if(this.props.topComponent){
       return (
-        <div>
+        <div className='sui-Card-topContent'>
           {this.props.topComponent}
         </div>
       );
@@ -13,9 +13,11 @@ export default class SuiCard extends React.Component {
 
     if(!this.props.topComponent){
       return (
-        <a href={this.props.topImgDefaultLink}>
-          <img src={this.props.topImgDefault} />
-        </a>
+        <div className='sui-Card-topContent'>
+          <a href={this.props.topImgDefaultLink}>
+            <img src={this.props.topImgDefault} />
+          </a>
+        </div>
       );
     }
   }
@@ -23,7 +25,7 @@ export default class SuiCard extends React.Component {
   renderBottom(){
     if(this.props.bottomComponent){
       return (
-        <div>
+        <div className='sui-Card-bottomContent'>
           {this.props.bottomComponent}
         </div>
       );
@@ -43,6 +45,6 @@ export default class SuiCard extends React.Component {
 SuiCard.propTypes = {
   topImgDefault: React.PropTypes.string,
   topImgDefaultLink: React.PropTypes.string,
-  topComponent: React.PropTypes.func,
-  bottomComponent: React.PropTypes.component
+  topComponent: React.PropTypes.object,
+  bottomComponent: React.PropTypes.object
 };

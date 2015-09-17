@@ -1,10 +1,62 @@
 # sui-card React Component
 
-Wrapper component to define a **card** structured content based in the following structure:
+Wrapper component to define a **card** structured content based in the following structure.
 
-- **sui-card-media**: A placeholder to display a picture. If no picture is passed a generic icon will be displayed instead.
+## Demo page
 
-- **sui-card-content**: A placeholder to fit any content based on your core business needs.
+Checkout a Sui-Card component demo [here](http://sui-components.github.io/sui-card/).
+
+## Usage
+
+The **SUI-Card** component features a generic `div` tag including two more nested containers one on top of the other.
+
+Top and bottom containers may fit any content provided to **Sui-Card**. Use the following classes to layout styling:
+
+- **sui-Card-topContent**: <br />
+This is the top placeholder where you can fit any custom component: from a simple picture to a full featured slider.
+
+If no `topComponent` property is passed a default picture with link can be set using the following props:
+
+```
+// topImgDefault: Provide a custom image URL.
+// topImgDefaultLink: Provide a custom link.
+// topComponent: Provide any content as shown below:
+
+const top = (
+    <a href='http://google.com'>
+      <img src='http://msue.anr.msu.edu/uploads/images/forest.jpg' />
+    </a>
+);
+
+React.render(
+  <SuiCard
+    topImgDefault='http://placehold.it/300x200'
+    topImgDefaultLink='http://google.com'
+    topComponent={top}
+    />,
+    document.getElementById('main'));
+```
+
+- **sui-Card-bottomContent**: <br />
+A placeholder to fit any custom component to add to the bottom of **Sui-Card**. Use the `bottomComponent` property to do the trick.
+
+If no `bottomComponent` property is passed the bottom container will not be rendered:
+
+```
+const bottom = (
+  <div>
+    <h2>Insert your title here</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <a href='http://google.com'>Contact</a>
+  </div>
+);
+
+React.render(
+  <SuiCard
+    bottomComponent={bottom}
+    />,
+    document.getElementById('main'));
+```
 
 ## Instalation
 Clone the repo.
@@ -23,20 +75,6 @@ Run:
 ```
 $ npm run dev
 ```
-
-
-## Usage
-The sui-card component is basically a block container to load dinamic content inside.
-Example:
-```
-React.render(<Card
-    cardcontent={'Lorem ipsum dolor sit amet'}
-    multimediaUrl={'http://placehold.it/300x150'}
-  />,
-  document.getElementById('main'));
-```
-
-It renders a cleared generic `div` element with and increased padding-bottom in screen resolutions smaller than 750px to better fit smaller screens.
 
 ## Bundle
 In order to generate the bundle including all React dependencies and the component logic we need to bundle a single JS file running the following command:
@@ -66,9 +104,8 @@ $ npm run lint:jscs
 - The SUI-Card component is available as a NPM package [here](https://www.npmjs.com/package/@schibstedspain/sui-card):
 - `npm install @schibstedspain/sui-card`
 
-## Preview
-- Checkout the `gh-pages` demo page: [http://sui-components.github.io/sui-card/](http://sui-components.github.io/sui-card/)
-- Clone the repo and open `index.html` file inside `docs` folder <br />
+#ToDo
 
-## ToDo
-- Add Github pages demo
+- Flexbox layout.
+- Mediaqueries.
+- Parametrized layout to allow portrait or landscape orientation.

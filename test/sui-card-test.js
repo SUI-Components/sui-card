@@ -1,8 +1,5 @@
-import React from 'react';
 import expect from 'expect';
 import SuiCard from '../src/sui-card';
-import TopContent from '../src/top-content';
-import BottomContent from '../src/bottom-content';
 
 import {createComponent} from './utilities';
 
@@ -31,46 +28,6 @@ describe('sui-Card component test suite', function () {
 
     it('has the proper sui-Card class name', function() {
       expect(card.props.className).toBe('sui-Card');
-    });
-  });
-
-  describe('TopContent sub-component', function () {
-    let topContent;
-
-    beforeEach(() => {
-      topContent = createComponent(TopContent);
-    });
-
-    afterEach(() => {
-      topContent = null;
-    });
-
-    it('renders correctly', function() {
-      expect(topContent).toExist();
-    });
-
-    it('has the proper class sui-Card-topContent for container', function() {
-      expect(topContent.props.className).toBe('sui-Card-topContent');
-    });
-  });
-
-  describe('BottomContent sub-component', function() {
-    let bottomContent;
-
-    beforeEach(() => {
-      bottomContent = createComponent(BottomContent);
-    });
-
-    afterEach(() => {
-      bottomContent = null;
-    });
-
-    it('renders correctly', function() {
-      expect(bottomContent).toExist();
-    });
-
-    it('has the proper class sui-Card-bottomContent for container', function() {
-      expect(bottomContent.props.className).toBe('sui-Card-bottomContent');
     });
   });
 
