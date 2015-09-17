@@ -104,8 +104,9 @@ $ npm run lint:jscs
 - The SUI-Card component is available as a NPM package [here](https://www.npmjs.com/package/@schibstedspain/sui-card):
 - `npm install @schibstedspain/sui-card`
 
-#ToDo
+##ToDo
 
 - Flexbox layout.
 - Mediaqueries.
 - Parametrized layout to allow portrait or landscape orientation.
+- Add a distribution license type.
