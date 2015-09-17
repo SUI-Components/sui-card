@@ -1,9 +1,8 @@
 import React from 'react';
-import TestUtils from 'react/lib/ReactTestUtils';
 import expect from 'expect';
-import Card from '../src/sui-card';
-import CardMedia from '../src/sui-card-media';
-import CardContent from '../src/sui-card-content';
+import SuiCard from '../src/sui-card';
+import TopContent from '../src/top-content';
+import BottomContent from '../src/bottom-content';
 
 import {createComponent} from './utilities';
 
@@ -11,88 +10,15 @@ describe('sui-Card component test suite', function () {
 
   describe('loading', function() {
     it('all components are loaded properly', function () {
-      expect(Card).toNotBe(undefined);
-      expect(CardMedia).toNotBe(undefined);
-      expect(CardMedia).toNotBe(undefined);
+      expect(SuiCard).toNotBe(undefined);
     });
   });
 
-  describe('single card content sub-component', function () {
-    let cardContent;
-
-    beforeEach(() => {
-      cardContent = createComponent(CardContent);
-    });
-
-    afterEach(() => {
-      cardContent = null;
-    });
-
-    it('renders correctly', function() {
-      expect(cardContent).toExist();
-    });
-
-    it('has the proper class for container', function() {
-      expect(cardContent.props.className).toBe('sui-Card-content');
-    });
-  });
-
-  describe('card content sub-component with children', function() {
-    let cardContent;
-
-    beforeEach(() => {
-      cardContent = createComponent(CardContent, {}, (<div className='test'>Hello</div>));
-    });
-
-    afterEach(() => {
-      cardContent = null;
-    });
-
-    it('children are rendered correctly', function() {
-      expect(cardContent.props.children).toExist();
-      expect(cardContent.props.children.type).toBe('div');
-      expect(cardContent.props.children.props.className).toBe('test');
-      expect(cardContent.props.children.props.children).toBe('Hello');
-    });
-  });
-
-  describe('single card media with multimedia url', function() {
-    let cardMedia;
-
-    beforeEach(() => {
-      cardMedia = createComponent(CardMedia, {multimediaUrl: 'http://an.image.url'});
-    });
-
-    afterEach(() => {
-      cardMedia = null;
-    });
-
-    it('has the proper class for media container', function() {
-      expect(cardMedia.props.className).toBe('sui-Card-media');
-    });
-  });
-
-  describe('single card media without multimedia url', function() {
-    let cardMedia;
-
-    beforeEach(() => {
-      cardMedia = createComponent(CardMedia);
-    });
-
-    afterEach(() => {
-      cardMedia = null;
-    });
-
-    it('shows a default picture', function() {
-      expect(cardMedia.props.className).toBe('sui-Card-media sui-Card-media--no-picture');
-    });
-  });
-
-  describe('single card', function() {
+  describe('SuiCard component', function() {
     let card;
 
     beforeEach(() => {
-      card = createComponent(Card);
+      card = createComponent(SuiCard);
     });
 
     afterEach(() => {
@@ -103,32 +29,56 @@ describe('sui-Card component test suite', function () {
       expect(card).toExist();
     });
 
-    it('has the proper class name', function() {
+    it('has the proper sui-Card class name', function() {
       expect(card.props.className).toBe('sui-Card');
     });
   });
 
-  describe('Checking Card rendering integration with sub-components', function() {
-    let card;
+  describe('TopContent sub-component', function () {
+    let topContent;
 
     beforeEach(() => {
-      card = createComponent(Card, {multimediaUrl: 'http://an.image.url'}, (<div className='test'>Hello</div>));
+      topContent = createComponent(TopContent);
     });
 
     afterEach(() => {
-      card = null;
+      topContent = null;
     });
 
-    it('renders with children', function() {
-      const cardMedia = card.props.children[0];
-      const cardContent = card.props.children[1];
+    it('renders correctly', function() {
+      expect(topContent).toExist();
+    });
 
-      expect(cardMedia).toExist();
-      expect(cardMedia.props.multimediaUrl).toBe('http://an.image.url');
-      expect(cardContent).toExist();
-      expect(cardContent.props.children.type).toBe('div');
-      expect(cardContent.props.children.props.className).toBe('test');
-      expect(cardContent.props.children.props.children).toBe('Hello');
+    it('has the proper class sui-Card-topContent for container', function() {
+      expect(topContent.props.className).toBe('sui-Card-topContent');
+    });
+  });
+
+  describe('BottomContent sub-component', function() {
+    let bottomContent;
+
+    beforeEach(() => {
+      bottomContent = createComponent(BottomContent);
+    });
+
+    afterEach(() => {
+      bottomContent = null;
+    });
+
+    it('renders correctly', function() {
+      expect(bottomContent).toExist();
+    });
+
+    it('has the proper class sui-Card-bottomContent for container', function() {
+      expect(bottomContent.props.className).toBe('sui-Card-bottomContent');
+    });
+  });
+
+  describe('Checking SuiCard rendering integration when sub-components are provided', function() {
+
+    it('renders TopContent sub-component', function() {
+      const suiCard = createComponent(SuiCard, { topComponent: ('Lorem ipsum dolor sit amet') });
+      expect(suiCard.props.children.filter(child => child && child.props.children === 'Lorem ipsum dolor sit amet').length).toBe(1);
     });
   });
 });

@@ -1,4 +1,15 @@
 .sui-Card {
+  background-color: $c-bg-light;
   margin-bottom: 1em;
   padding-bottom: 10px;
+
+  .sui-Card-topContent {
+    img {
+      width: 100%;
+    }
+  }
+
+  .sui-Card-bottomContent {
+    padding: 1em;
+  }
 }

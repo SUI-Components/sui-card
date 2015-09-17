@@ -1,27 +1,48 @@
 import React from 'react';
-import CardMedia from '../sui-card-media';
-import CardContent from '../sui-card-content';
-import cx from 'classnames';
 
-export default class Card extends React.Component {
+export default class SuiCard extends React.Component {
+
+  renderTop(){
+    if(this.props.topComponent){
+      return (
+        <div>
+          {this.props.topComponent}
+        </div>
+      );
+    }
+
+    if(!this.props.topComponent){
+      return (
+        <a href={this.props.topImgDefaultLink}>
+          <img src={this.props.topImgDefault} />
+        </a>
+      );
+    }
+  }
+
+  renderBottom(){
+    if(this.props.bottomComponent){
+      return (
+        <div>
+          {this.props.bottomComponent}
+        </div>
+      );
+    }
+  }
+
   render() {
-    const classes = cx({
-      'sui-Card': true,
-      'is-Hover': this.props.hover
-    });
-
     return (
-      <div className={classes}>
-        <CardMedia {...this.props}/>
-        <CardContent>
-          {this.props.children}
-        </CardContent>
+      <div className='sui-Card'>
+        {this.renderTop()}
+        {this.renderBottom()}
       </div>
     );
   }
 }
 
-Card.propTypes = {
-  children: React.PropTypes.arrayOf(React.PropTypes.component),
-  hover: React.PropTypes.bool
+SuiCard.propTypes = {
+  topImgDefault: React.PropTypes.string,
+  topImgDefaultLink: React.PropTypes.string,
+  topComponent: React.PropTypes.func,
+  bottomComponent: React.PropTypes.component
 };

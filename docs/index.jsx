@@ -1,20 +1,28 @@
 import React from 'react';
-import {Card} from '../src';
+import SuiCard from '../src';
+import BottomContent from '../src/bottom-content';
 import '../src/index.scss';
+import './index.scss';
+
+const top = (
+  <div className='sui-Card-topContent'>
+    <a href='http://google.com'>
+      <img src='http://msue.anr.msu.edu/uploads/images/forest.jpg' />
+    </a>
+  </div>
+);
+
+const bottom = (
+  <BottomContent
+    title='Insert your title here'
+    description='Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+    contactLiteral='Contact' contactLink='http://google.com'/>
+);
 
 React.render(
-  <Card
-    multimediaUrl={'http://images.inmofactory.com/inmofactory/documents/1/98852/7538658/49226769.jpg/300x225/w_0/'}
-    url={'http://google.com'}>
-    <div class='content'>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur
-        adipisicing elit. Eius beatae excepturi
-        pariatur ullam temporibus ipsa molestias
-        officia eligendi, recusandae, cupiditate
-        quia sunt id, quaerat culpa sint minus,
-        tempore adipisci accusamus.
-      </p>
-    </div>
-  </Card>,
-  document.getElementById('main'));
+  <SuiCard
+    topImgDefault='http://placehold.it/300x200'
+    topImgDefaultLink='http://google.com'
+    topComponent={top}
+    bottomComponent={bottom} />,
+    document.getElementById('main'));
