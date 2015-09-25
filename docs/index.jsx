@@ -23,5 +23,6 @@ React.render(
     topImgDefaultLink='http://google.com'
     topComponent={top}
     bottomComponent={bottom}
+    portraitLayout={true}
     />,
     document.getElementById('main'));

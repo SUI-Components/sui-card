@@ -2,58 +2,50 @@
   "name": "@schibstedspain/sui-card",
   "version": "4.0.1",
   "main": "dist/",
-
   "contributors": [
-  {
-    "name": "Daniel de la Cruz",
-    "email": "daniel.delacruz@scmspain.com",
-    "url": "https://github.com/danderu"
-  },
-  {
-    "name": "David Garcia",
-    "email": "david.garcia@scmspain.com",
-    "url": "https://github.com/davecarter"
-  },
-  {
-    "name": "Carlos Villuendas",
-    "email": "carlos.villuendas@scmspain.com",
-    "url": "https://github.com/carlosvillu"
-  },
-  {
-    "name": "Joan Leon",
-    "email": "joan.leon@infojobs.net",
-    "url": "https://github.com/nucliweb"
-  }
-],
-
+    {
+      "name": "Daniel de la Cruz",
+      "email": "daniel.delacruz@scmspain.com",
+      "url": "https://github.com/danderu"
+    },
+    {
+      "name": "David Garcia",
+      "email": "david.garcia@scmspain.com",
+      "url": "https://github.com/davecarter"
+    },
+    {
+      "name": "Carlos Villuendas",
+      "email": "carlos.villuendas@scmspain.com",
+      "url": "https://github.com/carlosvillu"
+    },
+    {
+      "name": "Joan Leon",
+      "email": "joan.leon@infojobs.net",
+      "url": "https://github.com/nucliweb"
+    }
+  ],
   "keywords": [
     "SUI-Components",
     "ReactJS",
     "card",
     "schibstedspain"
   ],
-
   "scripts": {
     "clean:dist": "rm -rf ./dist/*",
-
     "predist": "npm run clean:dist -s",
     "dist": "npm run dist:scripts && npm run dist:styles",
     "dist:scripts": "babel src --out-dir dist",
     "dist:styles": "node-sass src/index.scss dist/sui-card.css --importer ./scripts/importer.js",
     "postdist:styles": "cp dist/sui-card.css dist/_sui-card.scss",
     "prepublish": "npm run dist",
-
     "lint": "npm run lint:eslint && npm run lint:sass",
     "lint:eslint": "eslint --ext=\".js\" --ext=\".jsx\" src/",
     "lint:sass": "scss-lint src/",
-
     "test": "mocha --compilers js:babel/register --recursive",
     "test:watch": "npm run test -- -w test src --watch-extensions jsx",
-
     "dev": "npm run dev:open && npm run dev:serve",
     "dev:serve": "webpack-dev-server --devtool eval --progress --colors --content-base docs/",
     "dev:open": "opener http://localhost:8080",
-
     "predoc": "webpack --config webpack.doc.config.js",
     "doc": "npm run doc:build",
     "doc:build": "gh-pages -d docs",

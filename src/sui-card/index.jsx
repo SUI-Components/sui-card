@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 
 export default class SuiCard extends React.Component {
 
@@ -33,8 +34,13 @@ export default class SuiCard extends React.Component {
   }
 
   render() {
+
+    const portraitLayout = cx({
+      'sui-Card--portrait': this.props.portraitLayout
+    });
+
     return (
-      <div className='sui-Card'>
+      <div className={`sui-Card ${portraitLayout}`}>
         {this.renderTop()}
         {this.renderBottom()}
       </div>
@@ -46,5 +52,6 @@ SuiCard.propTypes = {
   topImgDefault: React.PropTypes.string,
   topImgDefaultLink: React.PropTypes.string,
   topComponent: React.PropTypes.object,
-  bottomComponent: React.PropTypes.object
+  bottomComponent: React.PropTypes.object,
+  portraitLayout: React.PropTypes.bool
 };
