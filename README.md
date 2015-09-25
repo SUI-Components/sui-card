@@ -119,7 +119,5 @@ $ npm run lint:jscs
 
 ##ToDo
 
-- Flexbox layout.
 - Mediaqueries.
-- Parametrized layout to allow portrait or landscape orientation.
 - Add a distribution license type.

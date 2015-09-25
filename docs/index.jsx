@@ -24,5 +24,6 @@ React.render(
     topComponent={top}
     bottomComponent={bottom}
     landscapeLayout={true}
+    contentFirst={true}
     />,
     document.getElementById('main'));

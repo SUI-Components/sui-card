@@ -35,12 +35,14 @@ export default class SuiCard extends React.Component {
 
   render() {
 
-    const landscapeLayout = cx({
-      'sui-Card--landscape': this.props.landscapeLayout
+    const classNames = cx({
+      'sui-Card': true,
+      'sui-Card--landscape': this.props.landscapeLayout,
+      'sui-Card--contentFirst': this.props.landscapeLayout && this.props.contentFirst
     });
 
     return (
-      <div className={`sui-Card ${landscapeLayout}`}>
+      <div className={classNames}>
         {this.renderTop()}
         {this.renderBottom()}
       </div>
@@ -53,5 +55,6 @@ SuiCard.propTypes = {
   topImgDefaultLink: React.PropTypes.string,
   topComponent: React.PropTypes.object,
   bottomComponent: React.PropTypes.object,
-  landscapeLayout: React.PropTypes.bool
+  landscapeLayout: React.PropTypes.bool,
+  contentFirst: React.PropTypes.bool
 };

@@ -18,6 +18,12 @@
     padding: 0 1em 1em;
   }
 
+  &--contentFirst {
+    .sui-Card-topContent {
+      order: 1;
+    }
+  }
+
   &--landscape {
     flex-direction: row;
 
