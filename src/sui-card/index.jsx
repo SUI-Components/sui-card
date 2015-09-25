@@ -35,12 +35,12 @@ export default class SuiCard extends React.Component {
 
   render() {
 
-    const portraitLayout = cx({
-      'sui-Card--portrait': this.props.portraitLayout
+    const landscapeLayout = cx({
+      'sui-Card--portrait': this.props.landscapeLayout
     });
 
     return (
-      <div className={`sui-Card ${portraitLayout}`}>
+      <div className={`sui-Card ${landscapeLayout}`}>
         {this.renderTop()}
         {this.renderBottom()}
       </div>
@@ -53,5 +53,5 @@ SuiCard.propTypes = {
   topImgDefaultLink: React.PropTypes.string,
   topComponent: React.PropTypes.object,
   bottomComponent: React.PropTypes.object,
-  portraitLayout: React.PropTypes.bool
+  landscapeLayout: React.PropTypes.bool
 };
