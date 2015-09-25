@@ -1,11 +1,12 @@
 .sui-Card {
-  display: flex;
-  flex-direction:column;
   background-color: $c-bg-light;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 1em;
 
   .sui-Card-topContent {
     flex: 1 0 auto;
+
     img {
       display: block;
       width: 100%;
@@ -18,10 +19,11 @@
   }
 
   &--landscape {
-    flex-direction:row;
+    flex-direction: row;
 
     .sui-Card-topContent {
       flex: 1 1 auto;
+
       img {
         display: block;
         width: 100%;
