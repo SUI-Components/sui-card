@@ -58,6 +58,19 @@ React.render(
     document.getElementById('main'));
 ```
 
+## Card layout Orientation
+The default *Card* orientation is **portrait mode**. That's why the structure makes reference to *top* and *bottom* components.
+Use the `landscapeLayout={true}` parameter to set it landscape where the `topComponent` aligns to the left and the `bottomComponent` to the right:
+
+```
+React.render(
+  <SuiCard
+    landscapeLayout={true}
+    />,
+    document.getElementById('main'));
+```
+In addition, you can set it to **false** to render the SuiCard layout back to portrait orientation.
+
 ## Instalation
 Clone the repo.
 CD to folder `sui-card`
