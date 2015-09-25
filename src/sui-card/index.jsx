@@ -36,7 +36,7 @@ export default class SuiCard extends React.Component {
   render() {
 
     const landscapeLayout = cx({
-      'sui-Card--portrait': this.props.landscapeLayout
+      'sui-Card--landscape': this.props.landscapeLayout
     });
 
     return (
