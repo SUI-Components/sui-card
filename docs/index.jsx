@@ -1,5 +1,6 @@
 import React from 'react';
 import SuiCard from '../src';
+import Playground from 'component-playground';
 import '../src/index.scss';
 import './index.scss';
 
@@ -17,7 +18,7 @@ const bottom = (
   </div>
 );
 
-React.render(
+const componentExample = `
   <SuiCard
     topImgDefault='http://placehold.it/300x200'
     topImgDefaultLink='http://google.com'
@@ -25,5 +26,8 @@ React.render(
     bottomComponent={bottom}
     landscapeLayout={true}
     contentFirst={true}
-    />,
-    document.getElementById('main'));
+    />
+`;
+
+React.render(
+  <Playground codeText={componentExample} scope={{React, SuiCard, bottom, top}}/>, document.getElementById('item1'));
