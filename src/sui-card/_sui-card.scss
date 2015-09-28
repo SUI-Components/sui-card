@@ -1,14 +1,44 @@
 .sui-Card {
   background-color: $c-bg-light;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 1em;
 
   .sui-Card-topContent {
+    flex: 1 0 auto;
+
     img {
+      display: block;
       width: 100%;
     }
   }
 
   .sui-Card-bottomContent {
+    flex: 1 0 auto;
     padding: 0 1em 1em;
+  }
+
+  &--contentFirst {
+    .sui-Card-topContent {
+      order: 1;
+    }
+  }
+
+  &--landscape {
+    flex-direction: row;
+
+    .sui-Card-topContent {
+      flex: 1 1 auto;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .sui-Card-bottomContent {
+      flex: 1 1 auto;
+      padding: 0 1em 1em;
+    }
   }
 }
