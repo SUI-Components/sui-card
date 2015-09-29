@@ -12,7 +12,7 @@ The **SUI-Card** component features a generic `div` tag including two more neste
 
 Top and bottom containers may fit any content provided to **Sui-Card**. Use the following classes to layout styling:
 
-- **sui-Card-topContent**: <br />
+- **sui-Card-topComponent**: <br />
 This is the top placeholder where you can fit any custom component: from a simple picture to a full featured slider.
 
 If no `topComponent` property is passed a default picture with link can be set using the following props:
@@ -37,7 +37,7 @@ React.render(
     document.getElementById('main'));
 ```
 
-- **sui-Card-bottomContent**: <br />
+- **sui-Card-bottomComponent**: <br />
 A placeholder to fit any custom component to add to the bottom of **Sui-Card**. Use the `bottomComponent` property to do the trick.
 
 If no `bottomComponent` property is passed the bottom container will not be rendered:
@@ -107,11 +107,6 @@ SASS: (SASS linting rules specified in file `.scss-lint.yml`)
 ```
 $ npm run lint:sass
 ```
-JS (JS linting rules specified in file `.jscsrc`)
-
-```
-$ npm run lint:jscs
-```
 
 ## NPM
 - The SUI-Card component is available as a NPM package [here](https://www.npmjs.com/package/@schibstedspain/sui-card):
@@ -120,4 +115,3 @@ $ npm run lint:jscs
 ##ToDo
 
 - Mediaqueries.
-- Add a distribution license type.

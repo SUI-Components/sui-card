@@ -1,29 +1,47 @@
 import React from 'react';
 import SuiCard from '../src';
+import Playground from 'component-playground';
 import '../src/index.scss';
+import './styles/prism.scss';
 import './index.scss';
 
+import './styles/syntax.scss';
+import './styles/codemirror.scss';
+import './styles/demo.scss';
+
 const top = (
-    <a href='http://google.com'>
-      <img src='http://msue.anr.msu.edu/uploads/images/forest.jpg' />
+    <a href='http://bit.ly/1jt4zRp'>
+      <img src='http://bit.ly/1FzqHDX' />
     </a>
 );
 
 const bottom = (
   <div>
-    <h2>Insert your title here</h2>
+    <h2>Fishermen at work</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     <a href='http://google.com'>Contact</a>
   </div>
 );
 
-React.render(
+const componentExample = `
+  // Tweak these values to see changes in realtime
   <SuiCard
-    topImgDefault='http://placehold.it/300x200'
-    topImgDefaultLink='http://google.com'
+    topImgDefault='http://bit.ly/1LYWHy0'
+    topImgDefaultLink='http://bit.ly/1KPfv2H'
+
+    // Remove topComponent to see default values
     topComponent={top}
     bottomComponent={bottom}
+
+    // Set to false to change default orientation
     landscapeLayout={true}
     contentFirst={true}
-    />,
-    document.getElementById('main'));
+    />
+`;
+
+React.render(
+  <Playground
+    codeText={componentExample}
+    scope={{React, SuiCard, bottom, top}}
+  />,
+  document.getElementById('main'));
