@@ -6,7 +6,8 @@ header {
   padding: 1em;
 }
 
-header img {
+header img,
+ {
   float: left;
   margin-bottom: 1em;
   width: 120px;
@@ -31,7 +32,7 @@ body {
 
 .block {
   margin-bottom: 2em;
-  max-width: 650px;
+  max-width: 750px;
   padding: 1em;
 }
 
@@ -39,7 +40,7 @@ body {
   margin: 0 auto;
 }
 
-.block-description {
+.block-highlighted {
   background-color: #4AAFD0;
 }
 
@@ -47,8 +48,46 @@ body {
   background-color: #EEEEEE;
 }
 
+.block-github {
+  background-color: #d5d5d5;
+}
+
+.block-npm {
+  background-color: #cb3837;
+  color: white;
+}
+
+.block-dark {
+  background-color: #333333;
+  color: white;
+}
+
+.block-npm a {
+  color: white;
+}
+
+.footer {
+  height: 200px;
+}
+
+.footer h2 {
+  margin: 1em;
+  padding: 0;
+}
+
+.footer p {
+  margin: 0;
+}
+
+
+.footer img {
+  float: left;
+  margin: 1em 3em 1em;
+  width: 100px;
+}
+
 
 #main {
-  max-width: 650px;
+  max-width: 750px;
   margin: 0 auto;
 }
