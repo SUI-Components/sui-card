@@ -1,6 +1,6 @@
 import React from 'react';
+import ReactDom from 'react-dom';
 import SuiCard from '../src';
-import Playground from 'component-playground';
 import '../src/index.scss';
 import './styles/prism.scss';
 import './index.scss';
@@ -23,7 +23,7 @@ const bottom = (
   </div>
 );
 
-const componentExample = `
+const componentExample =(
   // Tweak these values to see changes in realtime
   <SuiCard
     topImgDefault='http://bit.ly/1LYWHy0'
@@ -36,12 +36,8 @@ const componentExample = `
     // Set to false to change default orientation
     landscapeLayout={true}
     contentFirst={true}
-    />
-`;
+    />);
 
-React.render(
-  <Playground
-    codeText={componentExample}
-    scope={{React, SuiCard, bottom, top}}
-  />,
+ReactDom.render(
+  componentExample,
   document.getElementById('main'));

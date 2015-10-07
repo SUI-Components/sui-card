@@ -1,7 +1,7 @@
 import expect from 'expect';
 import SuiCard from '../src/sui-card';
-
-import {createComponent} from './utilities';
+import React from 'react';
+import {createComponent, shallowRender} from './utilities';
 
 describe('sui-Card component test suite', function () {
 
@@ -15,7 +15,7 @@ describe('sui-Card component test suite', function () {
     let card;
 
     beforeEach(() => {
-      card = createComponent(SuiCard, { landscapeLayout: false });
+      card = shallowRender(SuiCard, { landscapeLayout: false });
     });
 
     afterEach(() => {
@@ -41,15 +41,24 @@ describe('sui-Card component test suite', function () {
   });
 
   describe('Checking SuiCard rendering integration when sub-components are provided', function() {
+    let childComponent;
+
+    beforeEach(() => {
+      childComponent = shallowRender(createComponent(<div>Lorem ipsum dolor sit amet</div>));
+    });
+
+    afterEach(() => {
+      childComponent = null;
+    });
 
     it('renders TopContent sub-component', function() {
-      const suiCard = createComponent(SuiCard, { topComponent: ('Lorem ipsum dolor sit amet') });
-      expect(suiCard.props.children.filter(child => child && child.props.children === 'Lorem ipsum dolor sit amet').length).toBe(1);
+      const suiCard = shallowRender(SuiCard, { topComponent: childComponent });
+      expect(suiCard.props.children.filter(child => child && child.props.children === childComponent).length).toBe(1);
     });
 
     it('renders BottomContent sub-component', function() {
-      const suiCard = createComponent(SuiCard, { bottomComponent: ('Lorem ipsum dolor sit amet') });
-      expect(suiCard.props.children.filter(child => child && child.props.children === 'Lorem ipsum dolor sit amet').length).toBe(1);
+      const suiCard = shallowRender(SuiCard, { bottomComponent: childComponent });
+      expect(suiCard.props.children.filter(child => child && child.props.children === childComponent).length).toBe(1);
     });
   });
 });
