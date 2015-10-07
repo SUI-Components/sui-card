@@ -48,8 +48,7 @@
     "dev:open": "opener http://localhost:8080",
     "predoc": "webpack --config webpack.doc.config.js",
     "doc": "npm run doc:build",
-    "doc:build": "gh-pages -d docs",
-    "postdoc": "cp -r docs/ ."
+    "doc:build": "gh-pages -d docs"
   },
   "repository": {
     "type": "git",
