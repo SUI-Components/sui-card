@@ -23,7 +23,7 @@ const bottom = (
   </div>
 );
 
-const componentExample =(
+const componentExample = (
   // Tweak these values to see changes in realtime
   <SuiCard
     topImgDefault='http://bit.ly/1LYWHy0'
