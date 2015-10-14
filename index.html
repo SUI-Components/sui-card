@@ -54,6 +54,24 @@
     </div>
     <p>If no topComponent property is passed a default picture with link can be set using the following props:</p>
     <h2>SUI-Card Component implementation</h2>
+    <div>
+      <pre>
+        <code class="language-js">
+          &lt;SuiCard
+            topImgDefault='http://bit.ly/1LYWHy0'
+            topImgDefaultLink='http://bit.ly/1KPfv2H'
+
+            // Remove topComponent to see default values
+            topComponent={top}
+            bottomComponent={bottom}
+
+            // Set to false to change default orientation
+            landscapeLayout={true}
+            contentFirst={true}
+            /&gt;);
+        </code>
+      </pre>
+    </div>
     <div id="main"></div>
   </div>
 </section>
