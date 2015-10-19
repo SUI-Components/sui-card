@@ -1,6 +1,6 @@
 {
   "name": "@schibstedspain/sui-card",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "main": "dist/",
   "contributors": [
     {
@@ -63,7 +63,7 @@
   },
   "dependencies": {
     "@schibstedspain/theme-basic": "latest",
-    "classnames": "^2.1.2",
+    "classnames": "^2.1.2"
   },
   "devDependencies": {
     "@schibstedspain/frontend-pre-commit-rules": "latest",
