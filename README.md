@@ -28,7 +28,7 @@ const top = (
     </a>
 );
 
-React.render(
+ReactDom.render(
   <SuiCard
     topImgDefault='http://placehold.it/300x200'
     topImgDefaultLink='http://google.com'
@@ -51,7 +51,7 @@ const bottom = (
   </div>
 );
 
-React.render(
+ReactDom.render(
   <SuiCard
     bottomComponent={bottom}
     />,
@@ -63,7 +63,7 @@ The default *Card* orientation is **portrait mode**. That's why the structure ma
 Use the `landscapeLayout={true}` parameter to set it landscape where the `topComponent` aligns to the left and the `bottomComponent` to the right:
 
 ```
-React.render(
+ReactDom.render(
   <SuiCard
     landscapeLayout={true}
     />,
@@ -71,23 +71,15 @@ React.render(
 ```
 In addition, you can set it to **false** to render the SuiCard layout back to portrait orientation.
 
-## Instalation
-Clone the repo.
-CD to folder `sui-card`
+## Installation
 
-run:
+In order of running the source code and start playing with the examples:
 
-```
-$ npm install
-```
-
-## Setup
-
-Run:
-
-```
-$ npm run dev
-```
+* `$ git clone https://github.com/scm-spain/sui-card`
+* `$ cd sui-card`
+* `$ npm install`
+* `$ npm run dev`
+*  Go to _localhost:8080_
 
 ## Bundle
 In order to generate the bundle including all React dependencies and the component logic we need to bundle a single JS file running the following command:
@@ -95,11 +87,17 @@ In order to generate the bundle including all React dependencies and the compone
 $ npm run build
 ```
 
-## Testing
+## JS Testing
 Execute a complete test by running:
 
 ```
-$ npm run test
+There are two options for executing tests:
+
+* Single mode: `$ npm test`
+* Watch mode: `$ npm run test:watch`
+
+## Lint Testing
+
 ```
 In addition, you can run specific test for linting JS and SASS:
 SASS: (SASS linting rules specified in file `.scss-lint.yml`)
