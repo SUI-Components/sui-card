@@ -1,6 +1,6 @@
 {
   "name": "@schibstedspain/sui-card",
-  "version": "5.0.0",
+  "version": "5.0.3",
   "main": "dist/",
   "contributors": [
     {
@@ -39,7 +39,7 @@
     "postdist:styles": "cp dist/sui-card.css dist/_sui-card.scss",
     "prepublish": "npm run dist",
     "lint": "npm run lint:eslint && npm run lint:sass",
-    "lint:eslint": "eslint --ext=\".js\" --ext=\".jsx\" src/",
+    "lint:eslint": "eslint --ext=.jsx --ext=js ./src/ ./test/ ./docs/",
     "lint:sass": "scss-lint src/",
     "test": "mocha --compilers js:babel/register --recursive",
     "test:watch": "npm run test -- -w test src --watch-extensions jsx",
@@ -59,21 +59,21 @@
     "test"
   ],
   "peerDependecies": {
-    "react": "0.14.0-rc1"
+    "react": "0.14"
   },
   "dependencies": {
-    "classnames": "^2.1.2",
-    "@schibstedspain/theme-basic": "latest"
+    "@schibstedspain/theme-basic": "latest",
+    "classnames": "^2.1.2"
   },
   "devDependencies": {
     "@schibstedspain/frontend-pre-commit-rules": "latest",
     "babel": "^5.5.6",
+    "babel-core": "^5.8.25",
     "babel-eslint": "~3.1.14",
-    "babel-jscs": "^1.0.1",
     "babel-loader": "^5.1.4",
     "css-loader": "^0.14.5",
     "eslint": "~0.23.0",
-    "eslint-plugin-react": "~2.5.0",
+    "eslint-plugin-react": "^3.5.1",
     "expect": "^1.6.0",
     "gh-pages": "^0.3.1",
     "lodash": "~3.9.3",
@@ -82,9 +82,9 @@
     "node-sass": "^3.1.2",
     "opener": "^1.4.1",
     "raw-loader": "^0.5.1",
-    "react": "0.14.0-rc1",
-    "react-addons-test-utils": "^0.14.0-rc1",
-    "react-dom": "latest",
+    "react": "0.14",
+    "react-addons-test-utils": "^0.14",
+    "react-dom": "0.14",
     "react-hot-loader": "^1.2.7",
     "sass-loader": "^1.0.2",
     "style-loader": "^0.12.3",

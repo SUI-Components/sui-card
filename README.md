@@ -17,7 +17,7 @@ This is the top placeholder where you can fit any custom component: from a simpl
 
 If no `topComponent` property is passed a default picture with link can be set using the following props:
 
-```
+```javascript
 // topImgDefault: Provide a custom image URL.
 // topImgDefaultLink: Provide a custom link.
 // topComponent: Provide any content as shown below:
@@ -42,7 +42,7 @@ A placeholder to fit any custom component to add to the bottom of **Sui-Card**. 
 
 If no `bottomComponent` property is passed the bottom container will not be rendered:
 
-```
+```javascript
 const bottom = (
   <div>
     <h2>Insert your title here</h2>
@@ -62,7 +62,7 @@ React.render(
 The default *Card* orientation is **portrait mode**. That's why the structure makes reference to *top* and *bottom* components.
 Use the `landscapeLayout={true}` parameter to set it landscape where the `topComponent` aligns to the left and the `bottomComponent` to the right:
 
-```
+```javascript
 React.render(
   <SuiCard
     landscapeLayout={true}
