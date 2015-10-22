@@ -7,7 +7,7 @@ Wrapper component to define a **card** structured content based in the following
 
 - Checkout a Sui-Card component demo [here](http://sui-components.github.io/sui-card/).
  <br /> or...
-- Clone the repo and open `index.html` file inside `docs` folder <br /> or...
+- Clone the repo and open `index.html` file inside `docs` folder
 
 
 ## Usage
