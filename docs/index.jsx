@@ -23,15 +23,37 @@ const bottom = (
   </div>
 );
 
+const bottomDefValues = (
+  <div>
+    <h2>Pencils closeup</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <a href='http://google.com'>Contact</a>
+  </div>
+);
+
+const portraitExample = (
+  // Tweak these values to see changes in realtime
+  <SuiCard
+
+    // Remove topComponent to see default values
+    topComponent={top}
+    bottomComponent={bottom}
+
+    // Set to false to change default orientation
+    landscapeLayout={false}
+    />);
+
+ReactDom.render(
+  portraitExample,
+  document.getElementById('mainPortrait'));
+
 const componentExample = (
   // Tweak these values to see changes in realtime
   <SuiCard
     topImgDefault='http://bit.ly/1LYWHy0'
     topImgDefaultLink='http://bit.ly/1KPfv2H'
 
-    // Remove topComponent to see default values
-    topComponent={top}
-    bottomComponent={bottom}
+    bottomComponent={bottomDefValues}
 
     // Set to false to change default orientation
     landscapeLayout={true}
