@@ -2,9 +2,13 @@
 
 Wrapper component to define a **card** structured content based in the following structure.
 
+
 ## Demo page
 
-Checkout a Sui-Card component demo [here](http://sui-components.github.io/sui-card/).
+- Checkout a Sui-Card component demo [here](http://sui-components.github.io/sui-card/).
+ <br /> or...
+- Clone the repo and open `index.html` file inside `docs` folder
+
 
 ## Usage
 
@@ -28,7 +32,7 @@ const top = (
     </a>
 );
 
-React.render(
+ReactDom.render(
   <SuiCard
     topImgDefault='http://placehold.it/300x200'
     topImgDefaultLink='http://google.com'
@@ -51,19 +55,21 @@ const bottom = (
   </div>
 );
 
-React.render(
+ReactDom.render(
   <SuiCard
     bottomComponent={bottom}
     />,
     document.getElementById('main'));
 ```
 
+
 ## Card layout Orientation
+
 The default *Card* orientation is **portrait mode**. That's why the structure makes reference to *top* and *bottom* components.
 Use the `landscapeLayout={true}` parameter to set it landscape where the `topComponent` aligns to the left and the `bottomComponent` to the right:
 
 ```
-React.render(
+ReactDom.render(
   <SuiCard
     landscapeLayout={true}
     />,
@@ -71,35 +77,47 @@ React.render(
 ```
 In addition, you can set it to **false** to render the SuiCard layout back to portrait orientation.
 
-## Instalation
-Clone the repo.
-CD to folder `sui-card`
 
-run:
+## Installation
 
-```
-$ npm install
-```
+To run the component and play with the examples you have to:
 
-## Setup
+### Download files from GitHub repo.
 
-Run:
+* `$ git clone https://github.com/scm-spain/sui-card`
+* `$ cd sui-card`
 
-```
-$ npm run dev
-```
+### Install dependencies.
+
+* `$ npm install` // Install npm dependencies from package.json
+
+### Launch the development environment.
+
+* `$ npm run dev` // Run development environment
+*  Go to _localhost:8080_
+
 
 ## Bundle
+
 In order to generate the bundle including all React dependencies and the component logic we need to bundle a single JS file running the following command:
 ```
 $ npm run build
 ```
 
+
 ## Testing
+
 Execute a complete test by running:
 
 ```
-$ npm run test
+There are two options for executing tests:
+
+* Single mode: `$ npm test`
+* Watch mode: `$ npm run test:watch`
+
+
+## Linting
+
 ```
 In addition, you can run specific test for linting JS and SASS:
 SASS: (SASS linting rules specified in file `.scss-lint.yml`)
@@ -108,10 +126,26 @@ SASS: (SASS linting rules specified in file `.scss-lint.yml`)
 $ npm run lint:sass
 ```
 
+
 ## NPM
-- The SUI-Card component is available as a NPM package [here](https://www.npmjs.com/package/@schibstedspain/sui-card):
-- `npm install @schibstedspain/sui-card`
+
+The SUI-Card component is available as a NPM package [here](https://www.npmjs.com/package/@schibstedspain/sui-card):
+
+```
+npm install @schibstedspain/sui-card
+```
+
 
 ##ToDo
 
 - Mediaqueries.
+
+
+## Environment Dependencies
+
+To run the lint tasks we have dependencies of:
+
+* [Ruby](https://www.ruby-lang.org/en/downloads/)
+* [scss-lint](https://github.com/brigade/scss-lint)
+
+If that tools are not installed you cant commit. Because the lint pass never will be ok.
