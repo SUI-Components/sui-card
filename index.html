@@ -27,6 +27,48 @@
         <p>This is the bottom placeholder. Pass a custom component or insert your static HTML code as shown in example.</p>
       </li>
     </ul>
+
+    <h2>SUI-Card Component implementation</h2>
+    <div>
+      <pre>
+        <code class="language-js">
+          &lt;SuiCard
+            // Implementation passing topComponent
+            topComponent={top}
+            bottomComponent={bottom}
+
+            // Set to true to change orientation
+            landscapeLayout={false}
+            /&gt;);
+        </code>
+      </pre>
+    </div>
+    <h2>SUI-Card Portrait render Example</h2>
+    <div id="mainPortrait"></div>
+
+    <p>If no topComponent property is passed a default picture with link can be set using the following props:</p>
+
+    <h2>SUI-Card Component implementation</h2>
+    <div>
+      <pre>
+        <code class="language-js">
+          &lt;SuiCard
+            // Implementation passing default values
+            topImgDefault='http://bit.ly/1LYWHy0'
+            topImgDefaultLink='http://bit.ly/1KPfv2H'
+
+            bottomComponent={bottom}
+
+            // Set to false to change default orientation
+            landscapeLayout={true}
+            contentFirst={true}
+            /&gt;);
+        </code>
+      </pre>
+    </div>
+    <h2>SUI-Card Landscape render Example</h2>
+    <div id="main"></div>
+
     <h2>Sub-components data structure</h2>
     <div>
       <pre>
@@ -43,7 +85,7 @@
     // inside sui-Card-bottomComponent sub-component
     const bottom = (
       &lt;div&gt;
-        &lt;h2&gt;Fishermen at work&lt;/h2&gt;
+        &lt;h2&gt;Pencils closeup&lt;/h2&gt;
         &lt;p&gt;Lorem ipsum dolor sit amet,
         consectetur adipisicing elit.&lt;/p&gt;
         &lt;a href='http://google.com'&gt;Contact&lt;/a&gt;
@@ -52,27 +94,6 @@
         </code>
       </pre>
     </div>
-    <p>If no topComponent property is passed a default picture with link can be set using the following props:</p>
-    <h2>SUI-Card Component implementation</h2>
-    <div>
-      <pre>
-        <code class="language-js">
-          &lt;SuiCard
-            topImgDefault='http://bit.ly/1LYWHy0'
-            topImgDefaultLink='http://bit.ly/1KPfv2H'
-
-            // Remove topComponent to see default values
-            topComponent={top}
-            bottomComponent={bottom}
-
-            // Set to false to change default orientation
-            landscapeLayout={true}
-            contentFirst={true}
-            /&gt;);
-        </code>
-      </pre>
-    </div>
-    <div id="main"></div>
   </div>
 </section>
 
