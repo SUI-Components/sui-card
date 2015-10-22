@@ -1,7 +1,9 @@
 .sui-Card {
   background-color: $c-bg-light;
+  border: 0;
   display: flex;
   flex-direction: column;
+
 
   &--contentFirst {
     .sui-Card-topContent {
