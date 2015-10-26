@@ -1,6 +1,6 @@
 # sui-card React Component
 
-Wrapper component to define a **card** structured content based in the following structure.
+The SUI-Card component features a generic div tag including two more nested containers one on top of the other.
 
 
 ## Demo page
@@ -27,8 +27,8 @@ If no `topComponent` property is passed a default picture with link can be set u
 // topComponent: Provide any content as shown below:
 
 const top = (
-    <a href='http://google.com'>
-      <img src='http://msue.anr.msu.edu/uploads/images/forest.jpg' />
+    <a href='http://bit.ly/1jt4zRp'>
+      <img src='http://bit.ly/1FzqHDX' />
     </a>
 );
 
@@ -36,6 +36,7 @@ ReactDom.render(
   <SuiCard
     topImgDefault='http://placehold.it/300x200'
     topImgDefaultLink='http://google.com'
+
     topComponent={top}
     />,
     document.getElementById('main'));
@@ -68,15 +69,20 @@ ReactDom.render(
 The default *Card* orientation is **portrait mode**. That's why the structure makes reference to *top* and *bottom* components.
 Use the `landscapeLayout={true}` parameter to set it landscape where the `topComponent` aligns to the left and the `bottomComponent` to the right:
 
-```
+When `landscapeLayout={true}` you can decide if you need to render the picture or the content in the left side of the card by setting `contentFirst={}` to `true` or `false`:
+
+```javascript
 ReactDom.render(
   <SuiCard
+    topComponent={top}
+    bottomComponent={bottom}
+
     landscapeLayout={true}
+    contentFirst={true} // Text content to the left of the card
+    contentFirst={false} // Image content to the left of the card
     />,
     document.getElementById('main'));
 ```
-In addition, you can set it to **false** to render the SuiCard layout back to portrait orientation.
-
 
 ## Installation
 
@@ -119,7 +125,9 @@ There are two options for executing tests:
 ## Linting
 
 ```
-In addition, you can run specific test for linting JS and SASS:
+
+## Linting
+We rely on *SCSS Lint* for , you can run specific test for linting JS and SASS:
 SASS: (SASS linting rules specified in file `.scss-lint.yml`)
 
 ```

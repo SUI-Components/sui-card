@@ -1,7 +1,9 @@
 .sui-Card {
   background-color: $c-bg-light;
+  border: 0;
   display: flex;
   flex-direction: column;
+
 
   &--contentFirst {
     .sui-Card-topContent {
@@ -17,7 +19,7 @@
 
       img {
         display: block;
-        max-width: 500px;
+        max-width: 300px;
         width: 100%;
       }
     }
@@ -40,5 +42,5 @@
 
 .sui-Card-bottomContent {
   flex: 1 0 auto;
-  padding: 0;
+  padding: 0 1em 1em;
 }
