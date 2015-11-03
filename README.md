@@ -47,7 +47,7 @@ A placeholder to fit any custom component to add to the bottom of **Sui-Card**. 
 
 If no `bottomComponent` property is passed the bottom container will not be rendered:
 
-```
+```javascript
 const bottom = (
   <div>
     <h2>Insert your title here</h2>
@@ -68,6 +68,21 @@ ReactDom.render(
 
 The default *Card* orientation is **portrait mode**. That's why the structure makes reference to *top* and *bottom* components.
 Use the `landscapeLayout={true}` parameter to set it landscape where the `topComponent` aligns to the left and the `bottomComponent` to the right:
+
+```javascript
+
+ReactDom.render(		
+  <SuiCard		
+    topComponent={top}		
+    bottomComponent={bottom}		
+		
+    landscapeLayout={true}		
+    />,		
+    document.getElementById('main'));		
+```		
+In addition, you can set it to **false** to render the SuiCard layout back to portrait orientation.		
+		
+## Content First Property
 
 When `landscapeLayout={true}` you can decide if you need to render the picture or the content in the left side of the card by setting `contentFirst={}` to `true` or `false`:
 
@@ -157,4 +172,4 @@ sudo gem install sass
 sudo gem install scss-lint
 ```
 
-If that tools are not installed you cant commit. Because the lint pass never will be ok.
+**You must install these tools in order to compile SASS files into regular CSS and be able to use SASS linting**
