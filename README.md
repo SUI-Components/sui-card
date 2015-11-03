@@ -2,9 +2,13 @@
 
 The SUI-Card component features a generic div tag including two more nested containers one on top of the other.
 
+
 ## Demo page
 
-Checkout a Sui-Card component demo [here](http://sui-components.github.io/sui-card/).
+- Checkout a Sui-Card component demo [here](http://sui-components.github.io/sui-card/).
+ <br /> or...
+- Clone the repo and open `index.html` file inside `docs` folder
+
 
 ## Usage
 
@@ -17,7 +21,7 @@ This is the top placeholder where you can fit any custom component: from a simpl
 
 If no `topComponent` property is passed a default picture with link can be set using the following props:
 
-```javascript
+```
 // topImgDefault: Provide a custom image URL.
 // topImgDefaultLink: Provide a custom link.
 // topComponent: Provide any content as shown below:
@@ -59,23 +63,27 @@ ReactDom.render(
     document.getElementById('main'));
 ```
 
+
 ## Card layout Orientation
+
 The default *Card* orientation is **portrait mode**. That's why the structure makes reference to *top* and *bottom* components.
 Use the `landscapeLayout={true}` parameter to set it landscape where the `topComponent` aligns to the left and the `bottomComponent` to the right:
 
 ```javascript
-ReactDom.render(
-  <SuiCard
-    topComponent={top}
-    bottomComponent={bottom}
 
-    landscapeLayout={true}
-    />,
-    document.getElementById('main'));
-```
-In addition, you can set it to **false** to render the SuiCard layout back to portrait orientation.
-
+ReactDom.render(		
+  <SuiCard		
+    topComponent={top}		
+    bottomComponent={bottom}		
+		
+    landscapeLayout={true}		
+    />,		
+    document.getElementById('main'));		
+```		
+In addition, you can set it to **false** to render the SuiCard layout back to portrait orientation.		
+		
 ## Content First Property
+
 When `landscapeLayout={true}` you can decide if you need to render the picture or the content in the left side of the card by setting `contentFirst={}` to `true` or `false`:
 
 ```javascript
@@ -91,35 +99,46 @@ ReactDom.render(
     document.getElementById('main'));
 ```
 
-## Instalation
-Clone the repo.
-CD to folder `sui-card`
+## Installation
 
-run:
+To run the component and play with the examples you have to:
 
-```
-$ npm install
-```
+### Download files from GitHub repo.
 
-## Setup
+* `$ git clone https://github.com/scm-spain/sui-card`
+* `$ cd sui-card`
 
-Run:
+### Install dependencies.
 
-```
-$ npm run dev
-```
+* `$ npm install` // Install npm dependencies from package.json
+
+### Launch the development environment.
+
+* `$ npm run dev` // Run development environment
+*  Go to _localhost:8080_
+
 
 ## Bundle
+
 In order to generate the bundle including all React dependencies and the component logic we need to bundle a single JS file running the following command:
 ```
 $ npm run build
 ```
 
+
 ## Testing
+
 Execute a complete test by running:
 
 ```
-$ npm run test
+There are two options for executing tests:
+
+* Single mode: `$ npm test`
+* Watch mode: `$ npm run test:watch`
+
+
+## Linting
+
 ```
 
 ## Linting
@@ -130,10 +149,27 @@ SASS: (SASS linting rules specified in file `.scss-lint.yml`)
 $ npm run lint:sass
 ```
 
+
 ## NPM
-- The SUI-Card component is available as a NPM package [here](https://www.npmjs.com/package/@schibstedspain/sui-card):
-- `npm install @schibstedspain/sui-card`
 
-##ToDo
+The SUI-Card component is available as a NPM package [here](https://www.npmjs.com/package/@schibstedspain/sui-card):
 
-- Mediaqueries.
+```
+npm install @schibstedspain/sui-card
+```
+
+
+## Environment Dependencies
+
+To run the lint tasks we have dependencies of:
+
+* [Ruby](https://www.ruby-lang.org/en/downloads/)
+
+* [scss-lint](https://github.com/brigade/scss-lint)
+
+```
+sudo gem install sass
+sudo gem install scss-lint
+```
+
+**You must install these tools in order to compile SASS files into regular CSS and be able to use SASS linting**
