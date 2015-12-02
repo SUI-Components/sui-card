@@ -4,9 +4,9 @@ import ReactTestUtils from 'react-addons-test-utils';
 export function createComponent(component){
   return class ChildComponent extends React.Component{
     render() {
-      return(component)
+      return(component);
     }
-  }
+  };
 }
 
 export function shallowRender(component, props, ...children) {
