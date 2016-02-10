@@ -15,85 +15,10 @@
 
 <section class="block block-usecase block--centered">
   <div class="centered-block">
-    <p>Top and bottom containers may fit any content provided to Sui-Card. Use the following classes to layout styling:</p>
-    <ul>
-      <li>
-        <strong>sui-Card-topComponent:</strong>
-        <p>This is the top placeholder where you can fit any custom component: from a simple picture to a full featured slider.</p>
-        <p>In the example below an anchor element wrapping an image is stored in constant 'top' and passed to SUI-Card component as 'top-content'.</p>
-      </li>
-      <li>
-        <strong>sui-Card-bottomComponent:</strong>
-        <p>This is the bottom placeholder. Pass a custom component or insert your static HTML code as shown in example.</p>
-      </li>
-    </ul>
 
-    <h2>SUI-Card Component implementation</h2>
-    <div>
-      <pre>
-        <code class="language-js">
-          &lt;SuiCard
-            // Implementation passing topComponent
-            topComponent={top}
-            bottomComponent={bottom}
-
-            // Set to true to change orientation
-            landscapeLayout={false}
-            /&gt;);
-        </code>
-      </pre>
-    </div>
-    <h2>SUI-Card Portrait render Example</h2>
-    <div id="mainPortrait"></div>
-
-    <p>If no topComponent property is passed a default picture with link can be set using the following props:</p>
-
-    <h2>SUI-Card Component implementation</h2>
-    <div>
-      <pre>
-        <code class="language-js">
-          &lt;SuiCard
-            // Implementation passing default values
-            topImgDefault='http://bit.ly/1LYWHy0'
-            topImgDefaultLink='http://bit.ly/1KPfv2H'
-
-            bottomComponent={bottom}
-
-            // Set to false to change default orientation
-            landscapeLayout={true}
-            contentFirst={true}
-            /&gt;);
-        </code>
-      </pre>
-    </div>
-    <h2>SUI-Card Landscape render Example</h2>
+    <h2>SUI-Card render Example</h2>
     <div id="main"></div>
 
-    <h2>Sub-components data structure</h2>
-    <div>
-      <pre>
-        <code class="language-js">
-    // The content of constant 'top' will be inserted
-    // inside sui-Card-topComponent sub-component
-    const top = (
-        &lt;a href='http://bit.ly/1jt4zRp'&gt;
-          &lt;img src='http://bit.ly/1FzqHDX' /&gt;
-        &lt;/a&gt;
-    );
-
-    // The content of constant 'bottom' will be inserted
-    // inside sui-Card-bottomComponent sub-component
-    const bottom = (
-      &lt;div&gt;
-        &lt;h2&gt;Pencils closeup&lt;/h2&gt;
-        &lt;p&gt;Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit.&lt;/p&gt;
-        &lt;a href='http://google.com'&gt;Contact&lt;/a&gt;
-      &lt;/div&gt;
-    );
-        </code>
-      </pre>
-    </div>
   </div>
 </section>
 

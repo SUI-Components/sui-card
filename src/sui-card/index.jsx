@@ -1,37 +1,9 @@
 import React from 'react';
 import cx from 'classnames';
+import SuiCardMultimedia from '../sui-card-multimedia';
+import SuiCardContent from '../sui-card-content';
 
-export default class SuiCard extends React.Component {
-
-  renderTop(){
-    if(this.props.topComponent){
-      return (
-        <div className='sui-Card-topContent'>
-          {this.props.topComponent}
-        </div>
-      );
-    }
-
-    if(!this.props.topComponent){
-      return (
-        <div className='sui-Card-topContent'>
-          <a href={this.props.topImgDefaultLink}>
-            <img src={this.props.topImgDefault} />
-          </a>
-        </div>
-      );
-    }
-  }
-
-  renderBottom(){
-    if(this.props.bottomComponent){
-      return (
-        <div className='sui-Card-bottomContent'>
-          {this.props.bottomComponent}
-        </div>
-      );
-    }
-  }
+class SuiCard extends React.Component {
 
   render() {
 
@@ -43,8 +15,8 @@ export default class SuiCard extends React.Component {
 
     return (
       <div className={classNames}>
-        {this.renderTop()}
-        {this.renderBottom()}
+        <SuiCardMultimedia {...this.props}/>
+        <SuiCardContent {...this.props}/>
       </div>
     );
   }
@@ -58,3 +30,5 @@ SuiCard.propTypes = {
   landscapeLayout: React.PropTypes.bool,
   contentFirst: React.PropTypes.bool
 };
+
+export default SuiCard;
