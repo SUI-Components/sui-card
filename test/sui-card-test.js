@@ -1,6 +1,7 @@
 import expect from 'expect';
 import SuiCard from '../src/sui-card';
 import {shallowRender} from './utilities';
+import {data} from './fixtures';
 
 describe('sui-Card component test suite', function () {
 
@@ -14,7 +15,7 @@ describe('sui-Card component test suite', function () {
     let card;
 
     beforeEach(() => {
-      card = shallowRender(SuiCard, { landscapeLayout: false });
+      card = shallowRender(SuiCard, {data});
     });
 
     afterEach(() => {

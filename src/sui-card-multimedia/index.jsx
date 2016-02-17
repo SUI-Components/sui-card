@@ -8,7 +8,14 @@ class SuiCardMultimedia extends React.Component {
   }
 
   render(){
-    return(<img className='sui-Card-image' src={this.props.data.multimediaurl} />);
+    return (
+      <div>
+        {this.props.data.multimedia.map((media, index) => {
+            return media.link ? (<a href={media.link} title={media.alt}><img className='sui-Card-image' src={media.src} alt={media.alt} key={index} /></a>)
+                              : (<img className='sui-Card-image' src={media.src} alt={media.alt} key={index} />);
+        })}
+      </div>
+    );
   }
 }
 

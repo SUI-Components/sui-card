@@ -1,7 +1,6 @@
 .sui-Card {
   background-color: $c-bg-light;
   max-width: 400px;
-  transition: all .5s ease;
 
   &-content {
     padding: 20px;
@@ -9,11 +8,10 @@
 
   &--landscape {
     max-width: none;
-    transition: all .5s ease;
 
     .sui-Card-image {
       float: left;
-      max-width: 20%;
+      max-width: 25%;
     }
 
     &::before,
@@ -30,7 +28,13 @@
       box-sizing: content-box;
       float: left;
       padding: 2.5% 5%;
-      width: 70%;
+      width: 65%;
+    }
+  }
+
+  &--contentFirst {
+    .sui-Card-image {
+      float: right;
     }
   }
 }

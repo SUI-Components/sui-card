@@ -6,7 +6,9 @@ import SuiCardContent from '../sui-card-content';
 class SuiCard extends React.Component {
   static get propTypes(){
     return {
-      landscapeLayout: React.PropTypes.bool
+      landscapeLayout: React.PropTypes.bool,
+      contentFirst: React.PropTypes.bool,
+      data: React.PropTypes.object
     };
   }
 
@@ -24,16 +26,25 @@ class SuiCard extends React.Component {
     });
   }
 
+  hasCardContent(){
+    if(this.props.data.title || this.props.data.description){
+      return (
+        <SuiCardContent {...this.props} handleLayout={this.handleLayout.bind(this)}/>
+      );
+    }
+  }
+
   render() {
     const classNames = cx({
       'sui-Card': true,
-      'sui-Card--landscape': this.state.landscapeLayout
+      'sui-Card--landscape': this.state.landscapeLayout,
+      'sui-Card--contentfirst': this.props.landscapeLayout && this.props.contentFirst
     });
 
     return (
       <div className={classNames}>
         <SuiCardMultimedia {...this.props}/>
-        <SuiCardContent {...this.props} handleLayout={this.handleLayout.bind(this)}/>
+        {this.hasCardContent()}
       </div>
     );
   }
