@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SuiTitle extends React.Component {
+class SuiCardTitle extends React.Component {
   static get propTypes(){
     return{
       data: React.PropTypes.object
@@ -9,9 +9,9 @@ class SuiTitle extends React.Component {
 
   render(){
     return (
-      <h1>{this.props.data.title.element}</h1>
+      <h2 className='sui-Card-heading'>{this.props.data.title}</h2>
     );
   }
 }
 
-export default SuiTitle;
+export default SuiCardTitle;

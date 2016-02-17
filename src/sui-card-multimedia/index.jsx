@@ -8,10 +8,8 @@ class SuiCardMultimedia extends React.Component {
   }
 
   render(){
-    return(<img src={this.props.data.multimediaurl} />);
+    return(<img className='sui-Card-image' src={this.props.data.multimediaurl} />);
   }
 }
-
-
 
 export default SuiCardMultimedia;

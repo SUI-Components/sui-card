@@ -1,7 +1,6 @@
 import expect from 'expect';
 import SuiCard from '../src/sui-card';
-import React from 'react';
-import {createComponent, shallowRender} from './utilities';
+import {shallowRender} from './utilities';
 
 describe('sui-Card component test suite', function () {
 
