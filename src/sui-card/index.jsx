@@ -1,6 +1,5 @@
 import React from 'react';
 import cx from 'classnames';
-import SuiCardMultimedia from '../sui-card-multimedia';
 import SuiCardContent from '../sui-card-content';
 
 class SuiCard extends React.Component {
@@ -8,7 +7,8 @@ class SuiCard extends React.Component {
     return {
       landscapeLayout: React.PropTypes.bool,
       contentFirst: React.PropTypes.bool,
-      data: React.PropTypes.object
+      data: React.PropTypes.object,
+      children: React.PropTypes.component
     };
   }
 
@@ -43,7 +43,6 @@ class SuiCard extends React.Component {
 
     return (
       <div className={classNames}>
-        <SuiCardMultimedia {...this.props}/>
         {this.hasCardContent()}
       </div>
     );

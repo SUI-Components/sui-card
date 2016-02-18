@@ -62,6 +62,7 @@
   },
   "dependencies": {
     "@schibstedspain/theme-basic": "latest",
+    "@schibstedspain/sui-multimedia": "latest",
     "classnames": "2.2.0"
   },
   "devDependencies": {

@@ -23,5 +23,21 @@ const data = {
 };
 
 ReactDom.render(
-  <SuiCard data={data} />,
+  <SuiCard data={data}/>,
   document.getElementById('main'));
+
+ReactDom.render(
+    <SuiCard
+      primary={[
+        <div className='sui-Card-primary'>
+          <SuiMultimedia />
+        </div>
+      ]}
+      secondary={[
+        <div className='sui-Card-secondary'>
+          <SuiTitle />
+          <SuiDescription />
+        </div>
+      ]}
+    />
+);
