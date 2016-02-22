@@ -47,12 +47,12 @@ ReactDom.render(
       ]}
       secondary={[
         <div>
-          <h2 className='sui-Card-title'>
-							This is the Card Title
-					</h2>
-          <p className='sui-Card-description'>
-							This is the description
-					</p>
+            <h2 className='sui-Card-title'>
+                This is the Card Title
+            </h2>
+            <p className='sui-Card-description'>
+                This is the description
+            </p>
         </div>
       ]}
     />,
