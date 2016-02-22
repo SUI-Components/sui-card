@@ -5,7 +5,7 @@ The SUI-Card component features a placeholder to portray a custom primary and a 
 
 ## Demo page
 
-- Checkout a Sui-Card component demo [here](http://sui-components.github.io/sui-card/).
+- Check out a Sui-Card component demo [here](http://sui-components.github.io/sui-card/).
 
 ## Usage
 
@@ -21,12 +21,12 @@ ReactDom.render(
       ]}
       secondary={[
         <div>
-          <h2 className='sui-Card-title'>
-							This is the Card Title
-					</h2>
-          <p className='sui-Card-description'>
-							This is the description
-					</p>
+            <h2 className='sui-Card-title'>
+            This is the Card Title
+            </h2>
+            <p className='sui-Card-description'>
+                This is the description
+            </p>
         </div>
       ]}
     />,
@@ -75,11 +75,11 @@ ReactDom.render(
       secondary={[
         <div>
           <h2 className='sui-Card-title'>
-							This is the Card Title
-					</h2>
+          This is the Card Title
+          </h2>
           <p className='sui-Card-description'>
-							This is the description
-					</p>
+          This is the description
+          </p>
         </div>
       ]}
     />,
@@ -145,4 +145,3 @@ The SUI-Card component is available as a NPM package [here](https://www.npmjs.co
 ```
 npm install @schibstedspain/sui-card
 ```
-
