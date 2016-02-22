@@ -1,9 +1,8 @@
 .sui-Card {
   background-color: $c-gray-lighter;
 
-  &-primaryImage {
-    height: auto;
-    width: 100%;
+  &-primary {
+    margin: 0;
   }
 
   &-secondary {
@@ -17,4 +16,19 @@
   &-description {
     margin: 1em 0 0;
   }
+
+  &--landscape {
+    overflow: hidden;
+
+    .sui-Card-primary {
+      float: left;
+    }
+  }
+
+  &--contentfirst {
+    .sui-Card-primary {
+      float: right;
+    }
+  }
 }
+

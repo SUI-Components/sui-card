@@ -58,7 +58,7 @@
     "test"
   ],
   "peerDependecies": {
-    "react": "0.14.0"
+    "react": "0.14"
   },
   "dependencies": {
     "@schibstedspain/theme-basic": "latest",
@@ -86,9 +86,9 @@
     "node-sass": "3.4.2",
     "opener": "1.4.1",
     "raw-loader": "0.5.1",
-    "react": "0.14.0",
-    "react-addons-test-utils": "0.14.0",
-    "react-dom": "0.14.0",
+    "react": "0.14",
+    "react-addons-test-utils": "0.14",
+    "react-dom": "0.14",
     "react-hot-loader": "1.2.7",
     "sass-loader": "1.0.2",
     "style-loader": "0.12.3",
