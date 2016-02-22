@@ -1,14 +1,15 @@
 import React from 'react';
 import cx from 'classnames';
-import SuiCardContent from '../sui-card-content';
+import SuiCardPrimaryContent from '../sui-card-primary';
+import SuiCardSecondaryContent from '../sui-card-secondary';
 
 class SuiCard extends React.Component {
   static get propTypes(){
     return {
       landscapeLayout: React.PropTypes.bool,
       contentFirst: React.PropTypes.bool,
-      data: React.PropTypes.object,
-      children: React.PropTypes.component
+      primary: React.PropTypes.array,
+      secondary: React.PropTypes.array
     };
   }
 
@@ -19,20 +20,6 @@ class SuiCard extends React.Component {
     };
   }
 
-  handleLayout(e){
-    e.preventDefault();
-    this.setState({
-      landscapeLayout: !this.state.landscapeLayout
-    });
-  }
-
-  hasCardContent(){
-    if(this.props.data.title || this.props.data.description){
-      return (
-        <SuiCardContent {...this.props} handleLayout={this.handleLayout.bind(this)}/>
-      );
-    }
-  }
 
   render() {
     const classNames = cx({
@@ -43,7 +30,8 @@ class SuiCard extends React.Component {
 
     return (
       <div className={classNames}>
-        {this.hasCardContent()}
+        <SuiCardPrimaryContent {...this.props}/>
+        <SuiCardSecondaryContent {...this.props}/>
       </div>
     );
   }
