@@ -11,7 +11,7 @@ import './styles/codemirror.scss';
 import './styles/demo.scss';
 import '../node_modules/@schibstedspain/sui-multimedia/dist/_sui-multimedia.scss';
 
-const data = [{
+const images = [{
   src: 'https://scontent-mad1-1.cdninstagram.com/t51.2885-15/e15/11199623_633712610062793_1285693904_n.jpg',
   type: 'image',
   link: 'https://www.instagram.com/p/TNUdPKpMgM/?taken-by=davecarter'
@@ -20,7 +20,7 @@ const data = [{
 ReactDom.render(
     <SuiCard
       primary={[
-        <SuiMultimedia data={data} />
+        <SuiMultimedia images={images} />
       ]}
       secondary={[
         <div>

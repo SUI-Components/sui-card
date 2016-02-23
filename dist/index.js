@@ -85,14 +85,14 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var data = [{
+	var images = [{
 	  src: 'https://scontent-mad1-1.cdninstagram.com/t51.2885-15/e15/11199623_633712610062793_1285693904_n.jpg',
 	  type: 'image',
 	  link: 'https://www.instagram.com/p/TNUdPKpMgM/?taken-by=davecarter'
 	}];
 
 	_reactDom2.default.render(_react2.default.createElement(_src2.default, {
-	  primary: [_react2.default.createElement(_suiMultimedia2.default, { data: data })],
+	  primary: [_react2.default.createElement(_suiMultimedia2.default, { images: images })],
 	  secondary: [_react2.default.createElement(
 	    'div',
 	    null,
