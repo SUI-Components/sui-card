@@ -1,102 +1,90 @@
 # sui-card React Component
 
-The SUI-Card component features a generic div tag including two more nested containers one on top of the other.
+The SUI-Card component features a placeholder to portray a custom primary and a secondary content. So you can set an image, slider or any media component in one and some other content in the other.
 
 
 ## Demo page
 
-- Checkout a Sui-Card component demo [here](http://sui-components.github.io/sui-card/).
- <br /> or...
-- Clone the repo and open `index.html` file inside `docs` folder
-
+- Check out a Sui-Card component demo [here](http://sui-components.github.io/sui-card/).
 
 ## Usage
 
-The **SUI-Card** component features a generic `div` tag including two more nested containers one on top of the other.
+The **SUI-Card** allows to pass custom content in the primary placeholder and also provides a `sui-Card-primary` class as a wrapper.
 
-Top and bottom containers may fit any content provided to **Sui-Card**. Use the following classes to layout styling:
+Check out this example below
+```javascript
 
-- **sui-Card-topComponent**: <br />
-This is the top placeholder where you can fit any custom component: from a simple picture to a full featured slider.
-
-If no `topComponent` property is passed a default picture with link can be set using the following props:
-
+ReactDom.render(
+    <SuiCard
+      primary={[
+        <SuiMultimedia data={data} />
+      ]}
+      secondary={[
+        <div>
+            <h2 className='sui-Card-title'>
+            This is the Card Title
+            </h2>
+            <p className='sui-Card-description'>
+                This is the description
+            </p>
+        </div>
+      ]}
+    />,
+  document.getElementById('main')
+);
 ```
-// topImgDefault: Provide a custom image URL.
-// topImgDefaultLink: Provide a custom link.
-// topComponent: Provide any content as shown below:
 
-const top = (
-    <a href='http://bit.ly/1jt4zRp'>
-      <img src='http://bit.ly/1FzqHDX' />
-    </a>
+### Card layout Orientation
+
+The default *Card* orientation is **portrait mode**.  Use the `landscapeLayout={true}` parameter to set it landscape where the `primary` placeholder aligns to the left and the `secondary` to the right:
+
+```javascript
+
+ReactDom.render(
+    <SuiCard landscapeLayout
+      primary={[
+        <SuiMultimedia data={data} />
+      ]}
+      secondary={[
+        <div>
+            <h2 className='sui-Card-title'>
+                This is the Card Title
+            </h2>
+            <p className='sui-Card-description'>
+                This is the description
+            </p>
+        </div>
+      ]}
+    />,
+  document.getElementById('main')
 );
 
-ReactDom.render(
-  <SuiCard
-    topImgDefault='http://placehold.it/300x200'
-    topImgDefaultLink='http://google.com'
-
-    topComponent={top}
-    />,
-    document.getElementById('main'));
 ```
 
-- **sui-Card-bottomComponent**: <br />
-A placeholder to fit any custom component to add to the bottom of **Sui-Card**. Use the `bottomComponent` property to do the trick.
+### Content First Property
 
-If no `bottomComponent` property is passed the bottom container will not be rendered:
+When `landscapeLayout={true}` you can also set secondary content placeholder rendered  before primary by setting `contentFirst={}` to `true`:
 
 ```javascript
-const bottom = (
-  <div>
-    <h2>Insert your title here</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-    <a href='http://google.com'>Contact</a>
-  </div>
+
+ReactDom.render(
+    <SuiCard landscapeLayout contentFirst
+      primary={[
+        <SuiMultimedia data={data} />
+      ]}
+      secondary={[
+        <div>
+          <h2 className='sui-Card-title'>
+          This is the Card Title
+          </h2>
+          <p className='sui-Card-description'>
+          This is the description
+          </p>
+        </div>
+      ]}
+    />,
+  document.getElementById('main')
 );
-
-ReactDom.render(
-  <SuiCard
-    bottomComponent={bottom}
-    />,
-    document.getElementById('main'));
-```
-
-
-## Card layout Orientation
-
-The default *Card* orientation is **portrait mode**. That's why the structure makes reference to *top* and *bottom* components.
-Use the `landscapeLayout={true}` parameter to set it landscape where the `topComponent` aligns to the left and the `bottomComponent` to the right:
-
-```javascript
-
-ReactDom.render(		
-  <SuiCard		
-    topComponent={top}		
-    bottomComponent={bottom}		
-		
-    landscapeLayout={true}		
-    />,		
-    document.getElementById('main'));		
-```		
-In addition, you can set it to **false** to render the SuiCard layout back to portrait orientation.		
-		
-## Content First Property
-
-When `landscapeLayout={true}` you can decide if you need to render the picture or the content in the left side of the card by setting `contentFirst={}` to `true` or `false`:
-
-```javascript
-ReactDom.render(
-  <SuiCard
-    topComponent={top}
-    bottomComponent={bottom}
-
-    landscapeLayout={true}
-    contentFirst={true} // Text content to the left of the card
-    contentFirst={false} // Image content to the left of the card
-    />,
-    document.getElementById('main'));
 ```
 
 ## Installation
@@ -157,19 +145,3 @@ The SUI-Card component is available as a NPM package [here](https://www.npmjs.co
 ```
 npm install @schibstedspain/sui-card
 ```
-
-
-## Environment Dependencies
-
-To run the lint tasks we have dependencies of:
-
-* [Ruby](https://www.ruby-lang.org/en/downloads/)
-
-* [scss-lint](https://github.com/brigade/scss-lint)
-
-```
-sudo gem install sass
-sudo gem install scss-lint
-```
-
-**You must install these tools in order to compile SASS files into regular CSS and be able to use SASS linting**

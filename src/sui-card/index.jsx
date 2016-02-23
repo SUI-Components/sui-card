@@ -1,60 +1,42 @@
 import React from 'react';
 import cx from 'classnames';
 
-export default class SuiCard extends React.Component {
-
-  renderTop(){
-    if(this.props.topComponent){
-      return (
-        <div className='sui-Card-topContent'>
-          {this.props.topComponent}
-        </div>
-      );
-    }
-
-    if(!this.props.topComponent){
-      return (
-        <div className='sui-Card-topContent'>
-          <a href={this.props.topImgDefaultLink}>
-            <img src={this.props.topImgDefault} />
-          </a>
-        </div>
-      );
-    }
+class SuiCard extends React.Component {
+  static get propTypes(){
+    return {
+      landscapeLayout: React.PropTypes.bool,
+      contentFirst: React.PropTypes.bool,
+      primary: React.PropTypes.array,
+      secondary: React.PropTypes.array
+    };
   }
 
-  renderBottom(){
-    if(this.props.bottomComponent){
-      return (
-        <div className='sui-Card-bottomContent'>
-          {this.props.bottomComponent}
-        </div>
-      );
-    }
+  constructor(props){
+    super(props);
+    this.state = {
+      landscapeLayout: this.props.landscapeLayout
+    };
   }
+
 
   render() {
-
     const classNames = cx({
       'sui-Card': true,
-      'sui-Card--landscape': this.props.landscapeLayout,
-      'sui-Card--contentFirst': this.props.landscapeLayout && this.props.contentFirst
+      'sui-Card--landscape': this.state.landscapeLayout,
+      'sui-Card--contentfirst': this.props.landscapeLayout && this.props.contentFirst
     });
 
     return (
       <div className={classNames}>
-        {this.renderTop()}
-        {this.renderBottom()}
+        <div className='sui-Card-primary'>
+          {this.props.primary}
+        </div>
+        <div className='sui-Card-secondary'>
+          {this.props.secondary}
+        </div>
       </div>
     );
   }
 }
 
-SuiCard.propTypes = {
-  topImgDefault: React.PropTypes.string,
-  topImgDefaultLink: React.PropTypes.string,
-  topComponent: React.PropTypes.object,
-  bottomComponent: React.PropTypes.object,
-  landscapeLayout: React.PropTypes.bool,
-  contentFirst: React.PropTypes.bool
-};
+export default SuiCard;

@@ -1,46 +1,39 @@
+@import 'settings';
+
 .sui-Card {
-  background-color: $c-bg-light;
-  border: 0;
-  display: flex;
-  flex-direction: column;
+  background-color: $c-gray-lighter;
 
+  &-primary {
+    margin: $m-pri-container;
+    padding: $p-pri-container;
+  }
 
-  &--contentFirst {
-    .sui-Card-topContent {
-      order: 1;
-    }
+  &-secondary {
+    margin: $m-sec-container;
+    padding: $p-sec-container;
+  }
+
+  &-title {
+    margin: $m-title;
+    padding: $p-title;
+  }
+
+  &-description {
+    margin: $m-description;
+    padding: $p-description;
   }
 
   &--landscape {
-    flex-direction: row;
+    overflow: hidden;
 
-    .sui-Card-topContent {
-      flex: 1 1 auto;
-
-      img {
-        display: block;
-        max-width: 300px;
-        width: 100%;
-      }
-    }
-
-    .sui-Card-bottomContent {
-      flex: 1 1 auto;
-      padding: 0 1em 1em;
+    .sui-Card-primary {
+      float: left;
     }
   }
-}
 
-.sui-Card-topContent {
-  flex: 1 0 auto;
-
-  img {
-    display: block;
-    width: 100%;
+  &--contentfirst {
+    .sui-Card-primary {
+      float: right;
+    }
   }
-}
-
-.sui-Card-bottomContent {
-  flex: 1 0 auto;
-  padding: 0 1em 1em;
 }
