@@ -1,65 +1,33 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import SuiCard from '../src';
+import SuiMultimedia from '@schibstedspain/sui-multimedia';
+
 import '../src/index.scss';
 import './styles/prism.scss';
 import './index.scss';
-
 import './styles/syntax.scss';
 import './styles/codemirror.scss';
 import './styles/demo.scss';
+import '../node_modules/@schibstedspain/sui-multimedia/dist/_sui-multimedia.scss';
 
-const top = (
-    <a href='http://bit.ly/1jt4zRp'>
-      <img src='http://bit.ly/1FzqHDX' />
-    </a>
-);
-
-const bottom = (
-  <div>
-    <h2>Fishermen at work</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-    <a href='http://google.com'>Contact</a>
-  </div>
-);
-
-const bottomDefValues = (
-  <div>
-    <h2>Pencils closeup</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-    <a href='http://google.com'>Contact</a>
-  </div>
-);
-
-const portraitExample = (
-  // Tweak these values to see changes in realtime
-  <SuiCard
-
-    // Remove topComponent to see default values
-    topComponent={top}
-    bottomComponent={bottom}
-
-    // Set to false to change default orientation
-    landscapeLayout={false}
-    />);
+const data = [{
+  src: 'https://scontent-mad1-1.cdninstagram.com/t51.2885-15/e15/11199623_633712610062793_1285693904_n.jpg',
+  type: 'image',
+  link: 'https://www.instagram.com/p/TNUdPKpMgM/?taken-by=davecarter'
+}];
 
 ReactDom.render(
-  portraitExample,
-  document.getElementById('mainPortrait'));
-
-const componentExample = (
-  // Tweak these values to see changes in realtime
-  <SuiCard
-    topImgDefault='http://bit.ly/1LYWHy0'
-    topImgDefaultLink='http://bit.ly/1KPfv2H'
-
-    bottomComponent={bottomDefValues}
-
-    // Set to false to change default orientation
-    landscapeLayout={true}
-    contentFirst={true}
-    />);
-
-ReactDom.render(
-  componentExample,
-  document.getElementById('main'));
+    <SuiCard
+      primary={[
+        <SuiMultimedia data={data} />
+      ]}
+      secondary={[
+        <div>
+          <h2 className='sui-Card-title'>This is the Card Title</h2>
+          <p className='sui-Card-description'>This is the description text of this Card</p>
+        </div>
+      ]}
+    />,
+  document.getElementById('main')
+);
