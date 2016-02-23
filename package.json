@@ -1,6 +1,6 @@
 {
   "name": "@schibstedspain/sui-card",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "main": "dist/",
   "contributors": [
     {
@@ -22,6 +22,16 @@
       "name": "Joan Leon",
       "email": "joan.leon@infojobs.net",
       "url": "https://github.com/nucliweb"
+    },
+    {
+      "name": "Rubén Martín",
+      "email": "ruben.martin@scmspain.com",
+      "url": "https://github.com/ruben-martin-lozano"
+    },
+    {
+      "name": "Kiko Ruiz",
+      "email": "francisco.ruiz@scmspain.com",
+      "url": "https://github.com/kikoruiz"
     }
   ],
   "keywords": [
@@ -62,7 +72,7 @@
   },
   "dependencies": {
     "@schibstedspain/theme-basic": "latest",
-    "@schibstedspain/sui-multimedia": "latest",
+    "@schibstedspain/sui-multimedia": "0.0.4",
     "classnames": "2.2.0"
   },
   "devDependencies": {
