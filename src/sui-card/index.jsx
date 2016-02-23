@@ -1,7 +1,5 @@
 import React from 'react';
 import cx from 'classnames';
-import SuiCardPrimaryContent from '../sui-card-primary';
-import SuiCardSecondaryContent from '../sui-card-secondary';
 
 class SuiCard extends React.Component {
   static get propTypes(){
@@ -30,8 +28,12 @@ class SuiCard extends React.Component {
 
     return (
       <div className={classNames}>
-        <SuiCardPrimaryContent {...this.props}/>
-        <SuiCardSecondaryContent {...this.props}/>
+        <div className='sui-Card-primary'>
+          {this.props.primary}
+        </div>
+        <div className='sui-Card-secondary'>
+          {this.props.secondary}
+        </div>
       </div>
     );
   }

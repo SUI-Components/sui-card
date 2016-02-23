@@ -1,20 +1,26 @@
+@import 'settings';
+
 .sui-Card {
   background-color: $c-gray-lighter;
 
   &-primary {
-    margin: 0;
+    margin: $m-pri-container;
+    padding: $p-pri-container;
   }
 
   &-secondary {
-    padding: 1em;
+    margin: $m-sec-container;
+    padding: $p-sec-container;
   }
 
   &-title {
-    margin: 0;
+    margin: $m-title;
+    padding: $p-title;
   }
 
   &-description {
-    margin: 1em 0 0;
+    margin: $m-description;
+    padding: $p-description;
   }
 
   &--landscape {
@@ -31,4 +37,3 @@
     }
   }
 }
-
