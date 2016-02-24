@@ -69,19 +69,19 @@
 
 	var _suiMultimedia2 = _interopRequireDefault(_suiMultimedia);
 
-	__webpack_require__(165);
+	__webpack_require__(166);
 
-	__webpack_require__(169);
+	__webpack_require__(170);
 
-	__webpack_require__(171);
+	__webpack_require__(172);
 
-	__webpack_require__(173);
+	__webpack_require__(174);
 
-	__webpack_require__(175);
+	__webpack_require__(176);
 
-	__webpack_require__(177);
+	__webpack_require__(178);
 
-	__webpack_require__(179);
+	__webpack_require__(180);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -19901,6 +19901,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _suiMultimediaImage = __webpack_require__(165);
+
+	var _suiMultimediaImage2 = _interopRequireDefault(_suiMultimediaImage);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -19924,15 +19928,14 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'sui-Multimedia' },
-	        this.props.data.map(function (media, index) {
-	          return media.link ? _react2.default.createElement(
+	        this.props.images.map(function (image, index) {
+	          return image.link ? _react2.default.createElement(
 	            'a',
-	            { href: media.link, title: media.alt, key: index },
-	            _react2.default.createElement('img', { src: media.src, alt: media.alt, className: 'sui-Multimedia-image' })
-	          ) : _react2.default.createElement('img', {
-	            src: media.src,
-	            alt: media.alt,
-	            className: 'sui-Multimedia-image',
+	            { href: image.link, title: image.alt, key: index },
+	            _react2.default.createElement(_suiMultimediaImage2.default, { src: image.src, alt: image.alt })
+	          ) : _react2.default.createElement(_suiMultimediaImage2.default, {
+	            src: image.src,
+	            alt: image.alt,
 	            key: index
 	          });
 	        })
@@ -19942,7 +19945,7 @@
 	    key: 'propTypes',
 	    get: function get() {
 	      return {
-	        data: _react2.default.PropTypes.array.isRequired
+	        images: _react2.default.PropTypes.array.isRequired
 	      };
 	    }
 	  }]);
@@ -19956,13 +19959,97 @@
 /* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SuiMultimediaImage = function (_React$Component) {
+	  _inherits(SuiMultimediaImage, _React$Component);
+
+	  _createClass(SuiMultimediaImage, null, [{
+	    key: 'propTypes',
+	    get: function get() {
+	      return {
+	        src: _react2.default.PropTypes.string.isRequired,
+	        defaultSrc: _react2.default.PropTypes.string,
+	        alt: _react2.default.PropTypes.string.isRequired,
+	        link: _react2.default.PropTypes.string
+	      };
+	    }
+	  }, {
+	    key: 'defaultProps',
+	    get: function get() {
+	      return {
+	        defaultSrc: 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGhlaWdodD0iMzJweCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzIgMzI7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnIGlkPSJMYXllcl8xIi8+PGcgaWQ9InhfeDVGX2FsdCI+PHBhdGggZD0iTTE2LDBDNy4xNjQsMCwwLDcuMTY0LDAsMTZzNy4xNjQsMTYsMTYsMTZzMTYtNy4xNjQsMTYtMTZTMjQuODM2LDAsMTYsMHogTTIzLjkxNCwyMS4wODYgICBsLTIuODI4LDIuODI4TDE2LDE4LjgyOGwtNS4wODYsNS4wODZsLTIuODI4LTIuODI4TDEzLjE3MiwxNmwtNS4wODYtNS4wODZsMi44MjgtMi44MjhMMTYsMTMuMTcybDUuMDg2LTUuMDg2bDIuODI4LDIuODI4ICAgTDE4LjgyOCwxNkwyMy45MTQsMjEuMDg2eiIgc3R5bGU9ImZpbGw6IzRFNEU1MDsiLz48L2c+PC9zdmc+'
+	      };
+	    }
+	  }]);
+
+	  function SuiMultimediaImage(props) {
+	    _classCallCheck(this, SuiMultimediaImage);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SuiMultimediaImage).call(this, props));
+
+	    _this.state = {
+	      src: _this.props.src,
+	      defaultSrc: _this.props.defaultSrc,
+	      alt: _this.props.alt,
+	      link: _this.props.link
+	    };
+	    return _this;
+	  }
+
+	  _createClass(SuiMultimediaImage, [{
+	    key: 'onError',
+	    value: function onError() {
+	      this.setState({
+	        src: this.state.defaultSrc
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement('img', {
+	        src: this.state.src,
+	        alt: this.state.alt,
+	        className: 'sui-Multimedia-image',
+	        onError: this.onError.bind(this)
+	      });
+	    }
+	  }]);
+
+	  return SuiMultimediaImage;
+	}(_react2.default.Component);
+
+	exports.default = SuiMultimediaImage;
+
+/***/ },
+/* 166 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(166);
+	var content = __webpack_require__(167);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(168)(content, {});
+	var update = __webpack_require__(169)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -19979,14 +20066,14 @@
 	}
 
 /***/ },
-/* 166 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(167)();
+	exports = module.exports = __webpack_require__(168)();
 	exports.push([module.id, ".sui-Card {\n  background-color: #999999; }\n  .sui-Card-primary {\n    margin: 0;\n    padding: 0; }\n  .sui-Card-secondary {\n    margin: 0;\n    padding: 1em; }\n  .sui-Card-title {\n    margin: 0;\n    padding: 0; }\n  .sui-Card-description {\n    margin: 1em 0 0;\n    padding: 0; }\n  .sui-Card--landscape {\n    overflow: hidden; }\n    .sui-Card--landscape .sui-Card-primary {\n      float: left; }\n  .sui-Card--contentfirst .sui-Card-primary {\n    float: right; }\n", ""]);
 
 /***/ },
-/* 167 */
+/* 168 */
 /***/ function(module, exports) {
 
 	/*
@@ -20042,7 +20129,7 @@
 
 
 /***/ },
-/* 168 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -20267,16 +20354,16 @@
 
 
 /***/ },
-/* 169 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(170);
+	var content = __webpack_require__(171);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(168)(content, {});
+	var update = __webpack_require__(169)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -20293,23 +20380,23 @@
 	}
 
 /***/ },
-/* 170 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(167)();
+	exports = module.exports = __webpack_require__(168)();
 	exports.push([module.id, "/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript */\n/**\n * okaidia theme for JavaScript, CSS and HTML\n * Loosely based on Monokai textmate theme by http://www.monokai.nl/\n * @author ocodia\n */\ncode[class*=\"language-\"],\npre[class*=\"language-\"] {\n  color: #f8f8f2;\n  text-shadow: 0 1px rgba(0, 0, 0, 0.3);\n  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;\n  direction: ltr;\n  text-align: left;\n  white-space: pre;\n  word-spacing: normal;\n  word-break: normal;\n  word-wrap: normal;\n  line-height: 1.5;\n  -moz-tab-size: 4;\n  -o-tab-size: 4;\n  tab-size: 4;\n  -webkit-hyphens: none;\n  -moz-hyphens: none;\n  -ms-hyphens: none;\n  hyphens: none; }\n\n/* Code blocks */\npre[class*=\"language-\"] {\n  padding: 1em;\n  margin: .5em 0;\n  overflow: auto;\n  border-radius: 0.3em; }\n\n:not(pre) > code[class*=\"language-\"],\npre[class*=\"language-\"] {\n  background: #272822; }\n\n/* Inline code */\n:not(pre) > code[class*=\"language-\"] {\n  padding: .1em;\n  border-radius: .3em; }\n\n.token.comment,\n.token.prolog,\n.token.doctype,\n.token.cdata {\n  color: slategray; }\n\n.token.punctuation {\n  color: #f8f8f2; }\n\n.namespace {\n  opacity: .7; }\n\n.token.property,\n.token.tag,\n.token.constant,\n.token.symbol,\n.token.deleted {\n  color: #f92672; }\n\n.token.boolean,\n.token.number {\n  color: #ae81ff; }\n\n.token.selector,\n.token.attr-name,\n.token.string,\n.token.char,\n.token.builtin,\n.token.inserted {\n  color: #a6e22e; }\n\n.token.operator,\n.token.entity,\n.token.url,\n.language-css .token.string,\n.style .token.string,\n.token.variable {\n  color: #f8f8f2; }\n\n.token.atrule,\n.token.attr-value,\n.token.function {\n  color: #e6db74; }\n\n.token.keyword {\n  color: #66d9ef; }\n\n.token.regex,\n.token.important {\n  color: #fd971f; }\n\n.token.important,\n.token.bold {\n  font-weight: bold; }\n\n.token.italic {\n  font-style: italic; }\n\n.token.entity {\n  cursor: help; }\n", ""]);
 
 /***/ },
-/* 171 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(172);
+	var content = __webpack_require__(173);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(168)(content, {});
+	var update = __webpack_require__(169)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -20326,23 +20413,23 @@
 	}
 
 /***/ },
-/* 172 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(167)();
+	exports = module.exports = __webpack_require__(168)();
 	exports.push([module.id, "header {\n  background-color: lightblue;\n  height: 150px;\n  padding: 1em; }\n\nheader img {\n  float: left;\n  margin-bottom: 1em;\n  width: 120px; }\n\nheader h1 {\n  float: left;\n  margin: 1em 1em 0 1em;\n  max-width: 650px; }\n\nheader h4 {\n  float: left;\n  margin: 0 2em; }\n\nbody {\n  background-color: #dddddd;\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  margin: 0; }\n\n.block {\n  margin-bottom: 2em;\n  max-width: 750px;\n  padding: 1em; }\n\n.block--centered {\n  margin: 0 auto; }\n\n.block-highlighted {\n  background-color: #4AAFD0; }\n\n.block-usecase {\n  background-color: #EEEEEE; }\n\n.block-github {\n  background-color: #d5d5d5; }\n\n.block-npm {\n  background-color: #cb3837;\n  color: white; }\n\n.block-dark {\n  background-color: #333333;\n  color: white; }\n\n.block-dark a {\n  color: #EEEEEE; }\n\n.block-npm a {\n  color: white; }\n\n.footer {\n  height: 200px; }\n\n.footer h2 {\n  margin: 1em;\n  padding: 0; }\n\n.footer p {\n  margin: 0; }\n\n.footer img {\n  float: left;\n  margin: 1em 3em 1em;\n  width: 100px; }\n\n#main {\n  max-width: 750px;\n  margin: 0 auto; }\n", ""]);
 
 /***/ },
-/* 173 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(174);
+	var content = __webpack_require__(175);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(168)(content, {});
+	var update = __webpack_require__(169)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -20359,23 +20446,23 @@
 	}
 
 /***/ },
-/* 174 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(167)();
+	exports = module.exports = __webpack_require__(168)();
 	exports.push([module.id, "/* Based on Sublime Text's Monokai theme */\n.cm-s-monokai.CodeMirror {\n  background: #1B2B34;\n  color: #CDD3DE; }\n\n.cm-s-monokai div.CodeMirror-selected {\n  background: #a7adba !important; }\n\n.cm-s-monokai.CodeMirror ::selection {\n  background: #4f5b66; }\n\n.cm-s-monokai.CodeMirror ::-moz-selection {\n  background: rgba(73, 72, 62, 0.99); }\n\n.cm-s-monokai .CodeMirror-gutters {\n  background: #272822;\n  border-right: 0px; }\n\n.cm-s-monokai .CodeMirror-guttermarker {\n  color: white; }\n\n.cm-s-monokai .CodeMirror-guttermarker-subtle {\n  color: #d0d0d0; }\n\n.cm-s-monokai .CodeMirror-linenumber {\n  color: #d0d0d0; }\n\n.cm-s-monokai .CodeMirror-cursor {\n  border-left: 1px solid #f8f8f0 !important; }\n\n.cm-s-monokai span.cm-comment {\n  color: #65737e; }\n\n.cm-s-monokai span.cm-atom {\n  color: #F99157; }\n\n.cm-s-monokai span.cm-number {\n  color: #F99157; }\n\n.cm-s-monokai span.cm-property {\n  color: #6699CC; }\n\n.cm-s-monokai span.cm-attribute {\n  color: #C594C5; }\n\n.cm-s-monokai span.cm-keyword {\n  color: #F2777A; }\n\n.cm-s-monokai span.cm-string {\n  color: #99C794; }\n\n.cm-s-monokai span.cm-string-2 {\n  color: #CDD3DE; }\n\n.cm-s-monokai span.cm-variable {\n  color: #CDD3DE; }\n\n.cm-s-monokai span.cm-variable-2 {\n  color: #9effff; }\n\n.cm-s-monokai span.cm-def {\n  color: #fd971f; }\n\n.cm-s-monokai span.cm-bracket {\n  color: #f8f8f2; }\n\n.cm-s-monokai span.cm-tag {\n  color: #f92672; }\n\n.cm-s-monokai span.cm-link {\n  color: #ae81ff; }\n\n.cm-s-monokai span.cm-error {\n  background: #f92672;\n  color: #f8f8f0; }\n\n.cm-s-monokai .CodeMirror-activeline-background {\n  background: #373831 !important; }\n\n.cm-s-monokai .CodeMirror-matchingbracket {\n  text-decoration: underline;\n  color: white !important; }\n", ""]);
 
 /***/ },
-/* 175 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(176);
+	var content = __webpack_require__(177);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(168)(content, {});
+	var update = __webpack_require__(169)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -20392,23 +20479,23 @@
 	}
 
 /***/ },
-/* 176 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(167)();
+	exports = module.exports = __webpack_require__(168)();
 	exports.push([module.id, "/* BASICS */\n.CodeMirror {\n  /* Set height, width, borders, and global font properties here */\n  font-family: monospace; }\n\n.CodeMirror-scroll {\n  /* Set scrolling behaviour here */\n  overflow: auto; }\n\n/* PADDING */\n.CodeMirror-lines {\n  padding: 14px 0;\n  /* Vertical padding around content */ }\n\n.CodeMirror pre {\n  padding: 0 14px;\n  /* Horizontal padding of content */ }\n\n.CodeMirror-scrollbar-filler {\n  background-color: white;\n  /* The little square between H and V scrollbars */ }\n\n/* GUTTER */\n.CodeMirror-gutters {\n  border-right: 1px solid #ddd;\n  background-color: #f7f7f7; }\n\n.CodeMirror-linenumber {\n  padding: 0 3px 0 5px;\n  min-width: 20px;\n  text-align: right;\n  color: #999; }\n\n/* CURSOR */\n.CodeMirror div.CodeMirror-cursor {\n  border-left: 1px solid black; }\n\n/* Shown when moving in bi-directional text */\n.CodeMirror div.CodeMirror-secondarycursor {\n  border-left: 1px solid silver; }\n\n.CodeMirror.cm-keymap-fat-cursor div.CodeMirror-cursor {\n  width: auto;\n  border: 0;\n  background: transparent;\n  background: rgba(0, 200, 0, 0.4);\n  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#6600c800, endColorstr=#4c00c800); }\n\n/* Kludge to turn off filter in ie9+, which also accepts rgba */\n.CodeMirror.cm-keymap-fat-cursor div.CodeMirror-cursor:not(#nonsense_id) {\n  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); }\n\n/* Can style cursor different in overwrite (non-insert) mode */\n/* DEFAULT THEME */\n.cm-s-default .cm-keyword {\n  color: #708; }\n\n.cm-s-default .cm-atom {\n  color: #219; }\n\n.cm-s-default .cm-number {\n  color: #164; }\n\n.cm-s-default .cm-def {\n  color: #00f; }\n\n.cm-s-default .cm-variable {\n  color: black; }\n\n.cm-s-default .cm-variable-2 {\n  color: #05a; }\n\n.cm-s-default .cm-variable-3 {\n  color: #085; }\n\n.cm-s-default .cm-property {\n  color: black; }\n\n.cm-s-default .cm-operator {\n  color: black; }\n\n.cm-s-default .cm-comment {\n  color: #a50; }\n\n.cm-s-default .cm-string {\n  color: #a11; }\n\n.cm-s-default .cm-string-2 {\n  color: #f50; }\n\n.cm-s-default .cm-meta {\n  color: #555; }\n\n.cm-s-default .cm-error {\n  color: #f00; }\n\n.cm-s-default .cm-qualifier {\n  color: #555; }\n\n.cm-s-default .cm-builtin {\n  color: #30a; }\n\n.cm-s-default .cm-bracket {\n  color: #997; }\n\n.cm-s-default .cm-tag {\n  color: #170; }\n\n.cm-s-default .cm-attribute {\n  color: #00c; }\n\n.cm-s-default .cm-header {\n  color: blue; }\n\n.cm-s-default .cm-quote {\n  color: #090; }\n\n.cm-s-default .cm-hr {\n  color: #999; }\n\n.cm-s-default .cm-link {\n  color: #00c; }\n\n.cm-negative {\n  color: #d44; }\n\n.cm-positive {\n  color: #292; }\n\n.cm-header, .cm-strong {\n  font-weight: bold; }\n\n.cm-em {\n  font-style: italic; }\n\n.cm-emstrong {\n  font-style: italic;\n  font-weight: bold; }\n\n.cm-link {\n  text-decoration: underline; }\n\n.cm-invalidchar {\n  color: #f00; }\n\ndiv.CodeMirror span.CodeMirror-matchingbracket {\n  color: #0f0; }\n\ndiv.CodeMirror span.CodeMirror-nonmatchingbracket {\n  color: #f22; }\n\n/* STOP */\n/* The rest of this file contains styles related to the mechanics of\n   the editor. You probably shouldn't touch them. */\n.CodeMirror {\n  line-height: 1;\n  position: relative;\n  overflow: hidden; }\n\n.CodeMirror-scroll {\n  /* 30px is the magic margin used to hide the element's real scrollbars */\n  /* See overflow: hidden in .CodeMirror, and the paddings in .CodeMirror-sizer */\n  margin-bottom: -30px;\n  margin-right: -30px;\n  padding-bottom: 30px;\n  padding-right: 30px;\n  height: 100%;\n  outline: none;\n  /* Prevent dragging from highlighting the element */\n  position: relative; }\n\n.CodeMirror-sizer {\n  position: relative; }\n\n/* The fake, visible scrollbars. Used to force redraw during scrolling\n   before actuall scrolling happens, thus preventing shaking and\n   flickering artifacts. */\n.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler {\n  position: absolute;\n  z-index: 6;\n  display: none; }\n\n.CodeMirror-vscrollbar {\n  right: 0;\n  top: 0;\n  overflow-x: hidden;\n  overflow-y: scroll; }\n\n.CodeMirror-hscrollbar {\n  bottom: 0;\n  left: 0;\n  overflow-y: hidden;\n  overflow-x: scroll; }\n\n.CodeMirror-scrollbar-filler {\n  right: 0;\n  bottom: 0;\n  z-index: 6; }\n\n.CodeMirror-gutters {\n  position: absolute;\n  left: 0;\n  top: 0;\n  height: 100%;\n  z-index: 3; }\n\n.CodeMirror-gutter {\n  height: 100%;\n  display: inline-block;\n  /* Hack to make IE7 behave */\n  *zoom: 1;\n  *display: inline; }\n\n.CodeMirror-gutter-elt {\n  position: absolute;\n  cursor: default;\n  z-index: 4; }\n\n.CodeMirror-lines {\n  cursor: text; }\n\n.CodeMirror pre {\n  /* Reset some styles that the rest of the page might have set */\n  -moz-border-radius: 0;\n  -webkit-border-radius: 0;\n  -o-border-radius: 0;\n  border-radius: 0;\n  border-width: 0;\n  background: transparent;\n  font-family: inherit;\n  font-size: inherit;\n  margin: 0;\n  white-space: pre;\n  word-wrap: normal;\n  line-height: inherit;\n  color: inherit;\n  z-index: 2;\n  position: relative;\n  overflow: visible; }\n\n.CodeMirror-wrap pre {\n  word-wrap: break-word;\n  white-space: pre-wrap;\n  word-break: normal; }\n\n.CodeMirror-linebackground {\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n  z-index: 0; }\n\n.CodeMirror-linewidget {\n  position: relative;\n  z-index: 2;\n  overflow: auto; }\n\n.CodeMirror-wrap .CodeMirror-scroll {\n  overflow-x: hidden; }\n\n.CodeMirror-measure {\n  position: absolute;\n  width: 100%;\n  height: 0px;\n  overflow: hidden;\n  visibility: hidden; }\n\n.CodeMirror-measure pre {\n  position: static; }\n\n.CodeMirror div.CodeMirror-cursor {\n  position: absolute;\n  visibility: hidden;\n  border-right: none;\n  width: 0; }\n\n.CodeMirror-focused div.CodeMirror-cursor {\n  visibility: visible; }\n\n.CodeMirror-selected {\n  background: #d9d9d9; }\n\n.CodeMirror-focused .CodeMirror-selected {\n  background: #d7d4f0; }\n\n.cm-searching {\n  background: #ffa;\n  background: rgba(255, 255, 0, 0.4); }\n\n/* IE7 hack to prevent it from returning funny offsetTops on the spans */\n.CodeMirror span {\n  *vertical-align: text-bottom; }\n\n@media print {\n  /* Hide the cursor when printing */\n  .CodeMirror div.CodeMirror-cursor {\n    visibility: hidden; } }\n", ""]);
 
 /***/ },
-/* 177 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(178);
+	var content = __webpack_require__(179);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(168)(content, {});
+	var update = __webpack_require__(169)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -20425,23 +20512,23 @@
 	}
 
 /***/ },
-/* 178 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(167)();
+	exports = module.exports = __webpack_require__(168)();
 	exports.push([module.id, "body {\n  background: #efefef; }\n\n#root {\n  padding: 40px 20px; }\n\n.component-documentation {\n  margin: 0 auto;\n  max-width: 800px; }\n\n.playground {\n  margin: 10px auto;\n  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);\n  border-radius: 5px;\n  overflow: hidden; }\n\n.playgroundCode .CodeMirror {\n  font-size: 1.2em;\n  line-height: 1.4;\n  height: 360px; }\n\n.playground.collapsableCode .playgroundCode {\n  height: 0;\n  overflow: hidden; }\n\n.playground.collapsableCode .playgroundCode.expandedCode {\n  height: auto; }\n\n.playgroundToggleCodeLink {\n  cursor: pointer;\n  font-family: monospace;\n  position: relative;\n  right: 0;\n  display: inline-block;\n  padding: 5px; }\n\n.playgroundToggleCodeLink:hover {\n  color: #aaa; }\n\n.CodeMirror {\n  padding: 10px; }\n\n.playgroundPreview {\n  background: white;\n  padding: 10px;\n  overflow: auto; }\n\n.playgroundError {\n  padding: 10px;\n  font-size: 12px;\n  color: white;\n  background: #F2777A; }\n", ""]);
 
 /***/ },
-/* 179 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(180);
+	var content = __webpack_require__(181);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(168)(content, {});
+	var update = __webpack_require__(169)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -20458,10 +20545,10 @@
 	}
 
 /***/ },
-/* 180 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(167)();
+	exports = module.exports = __webpack_require__(168)();
 	exports.push([module.id, ".sui-Multimedia-image {\n  display: block;\n  height: auto;\n  width: 100%; }\n", ""]);
 
 /***/ }
