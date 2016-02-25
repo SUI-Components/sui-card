@@ -1,6 +1,6 @@
 {
   "name": "@schibstedspain/sui-card",
-  "version": "6.0.1",
+  "version": "6.0.2",
   "main": "dist/",
   "contributors": [
     {
@@ -71,12 +71,12 @@
     "react": "0.14"
   },
   "dependencies": {
-    "@schibstedspain/theme-basic": "latest",
-    "@schibstedspain/sui-multimedia": "0.0.4",
+    "@schibstedspain/theme-basic": "3.0.1",
+    "@schibstedspain/sui-multimedia": "0.0.5",
     "classnames": "2.2.0"
   },
   "devDependencies": {
-    "@schibstedspain/frontend-pre-commit-rules": "latest",
+    "@schibstedspain/frontend-pre-commit-rules": "6.6.1",
     "babel": "6.1.18",
     "babel-cli": "6.2.0",
     "babel-core": "6.2.1",
