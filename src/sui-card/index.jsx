@@ -6,8 +6,8 @@ class SuiCard extends React.Component {
     return {
       landscapeLayout: React.PropTypes.bool,
       contentFirst: React.PropTypes.bool,
-      primary: React.PropTypes.array,
-      secondary: React.PropTypes.array
+      primary: React.PropTypes.object,
+      secondary: React.PropTypes.object
     };
   }
 
