@@ -41,7 +41,7 @@
     "schibstedspain"
   ],
   "scripts": {
-    "clean:dist": "rm -rf ./dist/*",
+    "clean:dist": "rimraf dist",
     "predist": "npm run clean:dist -s",
     "dist": "npm run dist:scripts && npm run dist:styles",
     "dist:scripts": "babel src --out-dir dist",
@@ -100,6 +100,7 @@
     "react-addons-test-utils": "0.14",
     "react-dom": "0.14",
     "react-hot-loader": "1.2.7",
+    "rimraf": "^2.5.2",
     "sass-loader": "1.0.2",
     "style-loader": "0.12.3",
     "webpack": "1.9.11",
