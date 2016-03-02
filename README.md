@@ -16,10 +16,10 @@ Check out this example below
 
 ReactDom.render(
     <SuiCard
-      primary={[
-        <SuiMultimedia data={data} />
-      ]}
-      secondary={[
+      primary={
+        <SuiMultimedia images={data} />
+      }
+      secondary={
         <div>
             <h2 className='sui-Card-title'>
             This is the Card Title
@@ -28,7 +28,7 @@ ReactDom.render(
                 This is the description
             </p>
         </div>
-      ]}
+      }
     />,
   document.getElementById('main')
 );
@@ -42,10 +42,10 @@ The default *Card* orientation is **portrait mode**.  Use the `landscapeLayout={
 
 ReactDom.render(
     <SuiCard landscapeLayout
-      primary={[
-        <SuiMultimedia data={data} />
-      ]}
-      secondary={[
+      primary={
+        <SuiMultimedia images={data} />
+      }
+      secondary={
         <div>
             <h2 className='sui-Card-title'>
                 This is the Card Title
@@ -54,7 +54,7 @@ ReactDom.render(
                 This is the description
             </p>
         </div>
-      ]}
+      }
     />,
   document.getElementById('main')
 );
@@ -69,10 +69,10 @@ When `landscapeLayout={true}` you can also set secondary content placeholder ren
 
 ReactDom.render(
     <SuiCard landscapeLayout contentFirst
-      primary={[
-        <SuiMultimedia data={data} />
-      ]}
-      secondary={[
+      primary={
+        <SuiMultimedia images={data} />
+      }
+      secondary={
         <div>
           <h2 className='sui-Card-title'>
           This is the Card Title
@@ -81,7 +81,7 @@ ReactDom.render(
           This is the description
           </p>
         </div>
-      ]}
+      }
     />,
   document.getElementById('main')
 );
