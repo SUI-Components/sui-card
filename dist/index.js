@@ -88,12 +88,13 @@
 	var images = [{
 	  src: 'https://scontent-mad1-1.cdninstagram.com/t51.2885-15/e15/11199623_633712610062793_1285693904_n.jpg',
 	  type: 'image',
+	  alt: 'Test',
 	  link: 'https://www.instagram.com/p/TNUdPKpMgM/?taken-by=davecarter'
 	}];
 
 	_reactDom2.default.render(_react2.default.createElement(_src2.default, {
-	  primary: [_react2.default.createElement(_suiMultimedia2.default, { images: images })],
-	  secondary: [_react2.default.createElement(
+	  primary: _react2.default.createElement(_suiMultimedia2.default, { images: images }),
+	  secondary: _react2.default.createElement(
 	    'div',
 	    null,
 	    _react2.default.createElement(
@@ -106,7 +107,7 @@
 	      { className: 'sui-Card-description' },
 	      'This is the description text of this Card'
 	    )
-	  )]
+	  )
 	}), document.getElementById('main'));
 
 /***/ },
@@ -19765,8 +19766,8 @@
 	      return {
 	        landscapeLayout: _react2.default.PropTypes.bool,
 	        contentFirst: _react2.default.PropTypes.bool,
-	        primary: _react2.default.PropTypes.array,
-	        secondary: _react2.default.PropTypes.array
+	        primary: _react2.default.PropTypes.object,
+	        secondary: _react2.default.PropTypes.object
 	      };
 	    }
 	  }]);
