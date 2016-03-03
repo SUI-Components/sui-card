@@ -1,5 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
+import {Lazy} from 'react-lazy';
 
 class SuiCard extends React.Component {
   static get propTypes(){
@@ -27,14 +28,14 @@ class SuiCard extends React.Component {
     });
 
     return (
-      <div className={classNames}>
-        <div className='sui-Card-primary'>
-          {this.props.primary}
+        <div className={classNames}>
+          <Lazy nodeName='div' className='sui-Card-primary'>
+            {this.props.primary}
+          </Lazy>
+          <div className='sui-Card-secondary'>
+            {this.props.secondary}
+          </div>
         </div>
-        <div className='sui-Card-secondary'>
-          {this.props.secondary}
-        </div>
-      </div>
     );
   }
 }

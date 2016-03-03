@@ -19,7 +19,7 @@ const images = [{
 }];
 
 ReactDom.render(
-    <SuiCard
+    <SuiCard landscapeLayout contentFirst
       primary={
         <SuiMultimedia images={images} />
       }

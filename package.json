@@ -68,12 +68,13 @@
     "test"
   ],
   "peerDependecies": {
-    "react": "0.14"
+    "react": "0.14.0"
   },
   "dependencies": {
-    "@schibstedspain/theme-basic": "3.0.1",
     "@schibstedspain/sui-multimedia": "0.0.5",
-    "classnames": "2.2.0"
+    "@schibstedspain/theme-basic": "3.0.1",
+    "classnames": "2.2.0",
+    "react-lazy": "0.0.3"
   },
   "devDependencies": {
     "@schibstedspain/frontend-pre-commit-rules": "6.6.1",
