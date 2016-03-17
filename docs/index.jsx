@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import SuiCard from '../src';
-import SuiMultimedia from '@schibstedspain/sui-multimedia';
 
 import '../src/index.scss';
 import './styles/prism.scss';
@@ -11,16 +10,16 @@ import './styles/codemirror.scss';
 import './styles/demo.scss';
 import '../node_modules/@schibstedspain/sui-multimedia/dist/_sui-multimedia.scss';
 
-const data = [{
+const data = {
   src: 'https://scontent-mad1-1.cdninstagram.com/t51.2885-15/e15/11199623_633712610062793_1285693904_n.jpg',
   type: 'image',
   link: 'https://www.instagram.com/p/TNUdPKpMgM/?taken-by=davecarter'
-}];
+};
 
 ReactDom.render(
-    <SuiCard
+    <SuiCard customClass={'myCustom-class'}
       primary={[
-        <SuiMultimedia data={data} />
+        <a href={data.link}><img src={data.src} /></a>
       ]}
       secondary={[
         <div>

@@ -9,7 +9,10 @@ The SUI-Card component features a placeholder to portray a custom primary and a 
 
 ## Usage
 
-The **SUI-Card** allows to pass custom content in the primary placeholder and also provides a `sui-Card-primary` class as a wrapper.
+The **SUI-Card** allows to pass custom content in the primary placeholder and also provides a `sui-Card-primary` class as a wrapper. This primary content **is required**.
+
+Secondary content might be passed or not to SuiCard component. If content is provided will be rendered inside a generic *div* `sui-Card-secondary` wrapper.
+If no content is provided this contained will not be rendered at all.
 
 Check out this example below
 ```javascript
@@ -17,7 +20,7 @@ Check out this example below
 ReactDom.render(
     <SuiCard
       primary={[
-        <SuiMultimedia data={data} />
+        <a href={data.link}><img src={data.src} /></a>
       ]}
       secondary={[
         <div>
@@ -43,7 +46,7 @@ The default *Card* orientation is **portrait mode**.  Use the `landscapeLayout={
 ReactDom.render(
     <SuiCard landscapeLayout
       primary={[
-        <SuiMultimedia data={data} />
+        <a href={data.link}><img src={data.src} /></a>
       ]}
       secondary={[
         <div>
@@ -70,7 +73,7 @@ When `landscapeLayout={true}` you can also set secondary content placeholder ren
 ReactDom.render(
     <SuiCard landscapeLayout contentFirst
       primary={[
-        <SuiMultimedia data={data} />
+        <a href={data.link}><img src={data.src} /></a>
       ]}
       secondary={[
         <div>

@@ -1,5 +1,11 @@
 @import '~@schibstedspain/theme-basic/src/settings';
 
+.sui-Card-primary {
+  img {
+    width: 100%;
+  }
+}
+
 header {
   background-color: lightblue;
   height: 150px;
