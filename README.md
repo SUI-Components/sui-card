@@ -1,4 +1,4 @@
-# sui-card React Component
+# Sui-card React Component
 
 The SUI-Card component features a placeholder to portray a custom primary and a secondary content. So you can set an image, slider or any media component in one and some other content in the other.
 
@@ -31,7 +31,7 @@ ReactDom.render(
                 This is the description
             </p>
         </div>
-      ]}
+      }
     />,
   document.getElementById('main')
 );
@@ -57,7 +57,7 @@ ReactDom.render(
                 This is the description
             </p>
         </div>
-      ]}
+      }
     />,
   document.getElementById('main')
 );
@@ -84,7 +84,7 @@ ReactDom.render(
           This is the description
           </p>
         </div>
-      ]}
+      }
     />,
   document.getElementById('main')
 );

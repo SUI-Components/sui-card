@@ -1,6 +1,6 @@
 {
   "name": "@schibstedspain/sui-card",
-  "version": "5.1.1",
+  "version": "6.0.5",
   "main": "dist/",
   "contributors": [
     {
@@ -22,6 +22,16 @@
       "name": "Joan Leon",
       "email": "joan.leon@infojobs.net",
       "url": "https://github.com/nucliweb"
+    },
+    {
+      "name": "Rubén Martín",
+      "email": "ruben.martin@scmspain.com",
+      "url": "https://github.com/ruben-martin-lozano"
+    },
+    {
+      "name": "Kiko Ruiz",
+      "email": "francisco.ruiz@scmspain.com",
+      "url": "https://github.com/kikoruiz"
     }
   ],
   "keywords": [
@@ -61,12 +71,13 @@
     "react": "0.14"
   },
   "dependencies": {
-    "@schibstedspain/theme-basic": "latest",
-    "@schibstedspain/sui-multimedia": "latest",
-    "classnames": "2.2.0"
+    "@schibstedspain/theme-basic": "3.0.1",
+    "@schibstedspain/sui-multimedia": "0.0.7",
+    "classnames": "2.2.0",
+    "lazysizes": "1.5.0-rc3"    
   },
   "devDependencies": {
-    "@schibstedspain/frontend-pre-commit-rules": "latest",
+    "@schibstedspain/frontend-pre-commit-rules": "6.6.1",
     "babel": "6.1.18",
     "babel-cli": "6.2.0",
     "babel-core": "6.2.1",
