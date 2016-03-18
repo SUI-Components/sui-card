@@ -8,7 +8,7 @@ class SuiCard extends React.Component {
       contentFirst: React.PropTypes.bool,
       primary: React.PropTypes.array.isRequired,
       secondary: React.PropTypes.array,
-      customClass: React.PropTypes.string
+      className: React.PropTypes.string
     };
   }
 
@@ -19,18 +19,11 @@ class SuiCard extends React.Component {
     };
   }
 
-  secondary() {
-    return (
-      <div className='sui-Card-secondary'>
-        {this.props.secondary}
-      </div>
-    );
-  }
 
   render() {
     const classNames = cx({
-      'sui-Card': true,
-      [`${this.props.customClass}`]: this.props.customClass,
+      'sui-Card': !this.props.className,
+      [`${this.props.className}`]: this.props.className,
       'sui-Card--landscape': this.state.landscapeLayout,
       'sui-Card--contentfirst': this.props.landscapeLayout && this.props.contentFirst
     });
@@ -40,7 +33,10 @@ class SuiCard extends React.Component {
         <div className='sui-Card-primary'>
           {this.props.primary}
         </div>
-        {this.props.secondary && this.secondary.bind()}
+        {this.props.secondary &&
+          <div className='sui-Card-secondary'>
+          {this.props.secondary}
+        </div>}
       </div>
     );
   }

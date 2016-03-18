@@ -37,6 +37,32 @@ ReactDom.render(
 );
 ```
 
+### Setting a custom className
+
+The `div` Card wrapper has a default `sui-Card` class.
+You can override it defining a custom class by setting the `proptype` `className` as follows:
+
+```javascript
+ReactDom.render(
+    <SuiCard className={'myCustom-class'}
+      primary={[
+        <a href={data.link}><img src={data.src} /></a>
+      ]}
+      secondary={[
+        <div>
+            <h2 className='sui-Card-title'>
+            This is the Card Title
+            </h2>
+            <p className='sui-Card-description'>
+                This is the description
+            </p>
+        </div>
+      }
+    />,
+  document.getElementById('main')
+);
+```
+
 ### Card layout Orientation
 
 The default *Card* orientation is **portrait mode**.  Use the `landscapeLayout={true}` parameter to set it landscape where the `primary` placeholder aligns to the left and the `secondary` to the right:

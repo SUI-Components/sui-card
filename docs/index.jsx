@@ -18,7 +18,7 @@ const data = {
 };
 
 ReactDom.render(
-    <SuiCard customClass={'myCustom-class'}
+    <SuiCard className={'myCustom-class'}
       primary={[
         <a href={data.link}><img src={data.src} /></a>
       ]}
