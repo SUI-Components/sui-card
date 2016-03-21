@@ -19,16 +19,31 @@ const images = [{
 }];
 
 ReactDom.render(
-    <SuiCard
+    <SuiCard className={'myCustom-class'}
       primary={
-        <SuiMultimedia images={images} />
+        <a href={images[0].link}><img src={images[0].src} /></a>
       }
-      secondary={
+      secondary={[
         <div>
           <h2 className='sui-Card-title'>This is the Card Title</h2>
           <p className='sui-Card-description'>This is the description text of this Card</p>
         </div>
-      }
+      ]}
     />,
   document.getElementById('main')
+);
+
+ReactDom.render(
+    <SuiCard className={'myCustom-class'}
+      primary={[
+        <SuiMultimedia images={images} />
+      ]}
+      secondary={[
+        <div>
+          <h2 className='sui-Card-title'>This is the Card Title</h2>
+          <p className='sui-Card-description'>This is the description text of this Card</p>
+        </div>
+      ]}
+    />,
+  document.getElementById('main-multimedia')
 );
