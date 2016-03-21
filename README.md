@@ -18,10 +18,10 @@ Check out this example below
 ```javascript
 
 ReactDom.render(
-    <SuiCard
-      primary={[
-        <a href={data.link}><img src={data.src} /></a>
-      ]}
+    <SuiCard className={'myCustom-class'}
+      primary={
+        <a href={images[0].link}><img src={images[0].src} /></a>
+      }
       secondary={[
         <div>
             <h2 className='sui-Card-title'>
@@ -45,9 +45,9 @@ You can override it defining a custom class by setting the `proptype` `className
 ```javascript
 ReactDom.render(
     <SuiCard className={'myCustom-class'}
-      primary={[
-        <a href={data.link}><img src={data.src} /></a>
-      ]}
+      primary={
+        <a href={images[0].link}><img src={images[0].src} /></a>
+      }
       secondary={[
         <div>
             <h2 className='sui-Card-title'>
@@ -71,9 +71,9 @@ The default *Card* orientation is **portrait mode**.  Use the `landscapeLayout={
 
 ReactDom.render(
     <SuiCard landscapeLayout
-      primary={[
-        <a href={data.link}><img src={data.src} /></a>
-      ]}
+      primary={
+        <a href={images[0].link}><img src={images[0].src} /></a>
+      }
       secondary={[
         <div>
             <h2 className='sui-Card-title'>
@@ -98,9 +98,9 @@ When `landscapeLayout={true}` you can also set secondary content placeholder ren
 
 ReactDom.render(
     <SuiCard landscapeLayout contentFirst
-      primary={[
-        <a href={data.link}><img src={data.src} /></a>
-      ]}
+      primary={
+        <a href={images[0].link}><img src={images[0].src} /></a>
+      }
       secondary={[
         <div>
           <h2 className='sui-Card-title'>
@@ -114,6 +114,19 @@ ReactDom.render(
     />,
   document.getElementById('main')
 );
+```
+
+## Data model used in this example
+
+Use an array of objects:
+
+```javascript
+const images = [{
+  src: 'https://scontent-mad1-1.cdninstagram.com/t51.2885-15/e15/11199623_633712610062793_1285693904_n.jpg',
+  type: 'image',
+  alt: 'Test',
+  link: 'https://www.instagram.com/p/TNUdPKpMgM/?taken-by=davecarter'
+}];
 ```
 
 ## Installation
