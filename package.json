@@ -73,8 +73,7 @@
   "dependencies": {
     "@schibstedspain/theme-basic": "3.0.1",
     "@schibstedspain/sui-multimedia": "0.0.7",
-    "classnames": "2.2.0",
-    "lazysizes": "1.5.0-rc3"    
+    "classnames": "2.2.0"
   },
   "devDependencies": {
     "@schibstedspain/frontend-pre-commit-rules": "6.6.1",
