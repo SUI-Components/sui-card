@@ -71,12 +71,12 @@
     "react": "0.14"
   },
   "dependencies": {
-    "@schibstedspain/theme-basic": "3.0.1",
-    "@schibstedspain/sui-multimedia": "0.0.7",
+    "@schibstedspain/theme-basic": "3.0",
+    "@schibstedspain/sui-multimedia": "0.0",
     "classnames": "2.2.0"
   },
   "devDependencies": {
-    "@schibstedspain/frontend-pre-commit-rules": "6.6.1",
+    "@schibstedspain/frontend-pre-commit-rules": "6.6",
     "babel": "6.1.18",
     "babel-cli": "6.2.0",
     "babel-core": "6.2.1",

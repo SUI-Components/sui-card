@@ -9,12 +9,16 @@
 <section class="block-highlighted block--centered">
   <div class="block block--centered">
     <h2>Description</h2>
-    <p>The SUI-Card component features a generic div tag including two more nested containers one on top of the other.</p>
+    <p>The SUI-Card component features a placeholder to portray a custom primary and a secondary content. So you can set an image, slider or any media component in one and some other content in the other.</p>
   </div>
 </section>
 
 <section class="block block-usecase block--centered">
   <div class="centered-block">
+    <p>The <strong>SUI-Card</strong> allows to pass custom content in the primary placeholder and also provides a sui-Card-primary class as a wrapper. This primary content <strong>is required</strong>.
+
+    Secondary content might be passed or not to SuiCard component. If content is provided will be rendered inside a generic <em>div</em> sui-Card-secondary wrapper.
+    If no content is provided this contained will not be rendered at all.</p>
 
     <h2>SUI-Card single image render Example</h2>
     <div id="main"></div>
@@ -23,27 +27,33 @@
     <div id="main-multimedia"></div>
 
     <h2>SUI-Card Component implementation</h2>
+    <p>Use an array of Objects</p>
     <div>
 <pre>
   <code class="language-js">
     const images = [{
       src: 'https://scontent-mad1-1.cdninstagram.com/t51.2885-15/e15/11199623_633712610062793_1285693904_n.jpg',
       type: 'image',
+      alt: 'Test',
       link: 'https://www.instagram.com/p/TNUdPKpMgM/?taken-by=davecarter'
     }];
 
     ReactDom.render(
-        &lt;SuiCard
-          primary={
-            &lt;SuiMultimedia images={images} /&gt;
-          }
-          secondary={
+        &lt;SuiCard className={'myCustom-class'}
+          primary=[{
+            &lt;a href={images[0].link}>&lt;img src={images[0].src} /&gt;&lt;/a&gt;
+          ]}
+          secondary={[
             &lt;div&gt;
-              &lt;h2 className='sui-Card-title'&gt;This is the Card Title&lt;/h2&gt;
-              &lt;p className='sui-Card-description'&gt;This is the description text of this Card&lt;/p&gt;
+                &lt;h2 className='sui-Card-title'&gt;
+                This is the Card Title
+                &lt;/h2&gt;
+                &lt;p className='sui-Card-description'&gt;
+                    This is the description
+                &lt;/p&gt;
             &lt;/div&gt;
           }
-        />,
+        /&gt;,
       document.getElementById('main')
     );
   </code>
