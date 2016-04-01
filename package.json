@@ -1,6 +1,6 @@
 {
   "name": "@schibstedspain/sui-card",
-  "version": "7.0.1",
+  "version": "7.1.0",
   "main": "dist/",
   "contributors": [
     {
@@ -72,11 +72,11 @@
   },
   "dependencies": {
     "@schibstedspain/theme-basic": "3.0",
-    "@schibstedspain/sui-multimedia": "0.1",
     "classnames": "2.2.0"
   },
   "devDependencies": {
     "@schibstedspain/frontend-pre-commit-rules": "6.6",
+    "@schibstedspain/sui-multimedia": "0.1",
     "babel": "6.1.18",
     "babel-cli": "6.2.0",
     "babel-core": "6.2.1",
