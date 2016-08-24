@@ -75,7 +75,7 @@
     "classnames": "2.2.0"
   },
   "devDependencies": {
-    "@schibstedspain/frontend-pre-commit-rules": "6.6",
+    "@schibstedspain/frontend-pre-commit-rules": "6.7",
     "@schibstedspain/sui-multimedia": "0.2",
     "babel": "6.1.18",
     "babel-cli": "6.2.0",
