@@ -1,46 +1,33 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import cx from 'classnames';
 
-class SuiCard extends React.Component {
-  static get propTypes(){
-    return {
-      landscapeLayout: React.PropTypes.bool,
-      contentFirst: React.PropTypes.bool,
-      primary: React.PropTypes.any.isRequired,
-      secondary: React.PropTypes.any,
-      className: React.PropTypes.string
-    };
-  }
+export default function SuiCard (props) {
+  const classNames = cx({
+    'sui-Card': !props.className,
+    [`${props.className}`]: props.className,
+    'sui-Card--landscape': props.landscapeLayout,
+    'sui-Card--contentfirst': props.landscapeLayout && props.contentFirst
+  });
 
-  constructor(props){
-    super(props);
-    this.state = {
-      landscapeLayout: this.props.landscapeLayout
-    };
-  }
-
-  render() {
-    const classNames = cx({
-      'sui-Card': !this.props.className,
-      [`${this.props.className}`]: this.props.className,
-      'sui-Card--landscape': this.state.landscapeLayout,
-      'sui-Card--contentfirst': this.props.landscapeLayout && this.props.contentFirst
-    });
-
-    return (
-      <div className={classNames}>
-        <div className='sui-Card-primary'>
-          {this.props.primary}
-        </div>
-        {
-          this.props.secondary &&
-          <div className='sui-Card-secondary'>
-            {this.props.secondary}
-          </div>
-        }
+  return (
+    <div className={classNames}>
+      <div className='sui-Card-primary'>
+        {props.primary}
       </div>
-    );
-  }
+      {
+        props.secondary &&
+        <div className='sui-Card-secondary'>
+          {props.secondary}
+        </div>
+      }
+    </div>
+  );
 }
 
-export default SuiCard;
+SuiCard.propTypes = {
+  landscapeLayout: PropTypes.bool,
+  contentFirst: PropTypes.bool,
+  primary: PropTypes.any.isRequired,
+  secondary: PropTypes.any,
+  className: PropTypes.string
+};
