@@ -1,3 +1,3 @@
-import SuiCard from './sui-card';
+import SuiCard from './sui-card'
 
-export default SuiCard;
+export default SuiCard

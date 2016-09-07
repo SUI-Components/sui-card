@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react';
-import cx from 'classnames';
+import React, { PropTypes } from 'react'
+import cx from 'classnames'
 
 export default function SuiCard (props) {
   const classNames = cx({
@@ -7,7 +7,7 @@ export default function SuiCard (props) {
     [`${props.className}`]: props.className,
     'sui-Card--landscape': props.landscapeLayout,
     'sui-Card--contentfirst': props.landscapeLayout && props.contentFirst
-  });
+  })
 
   return (
     <div className={classNames}>
@@ -16,12 +16,12 @@ export default function SuiCard (props) {
       </div>
       {
         props.secondary &&
-        <div className='sui-Card-secondary'>
-          {props.secondary}
-        </div>
+          <div className='sui-Card-secondary'>
+            {props.secondary}
+          </div>
       }
     </div>
-  );
+  )
 }
 
 SuiCard.propTypes = {
@@ -30,4 +30,4 @@ SuiCard.propTypes = {
   primary: PropTypes.any.isRequired,
   secondary: PropTypes.any,
   className: PropTypes.string
-};
+}
