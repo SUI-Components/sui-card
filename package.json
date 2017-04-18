@@ -1,6 +1,6 @@
 {
   "name": "@schibstedspain/sui-card",
-  "version": "7.2.0",
+  "version": "7.2.1",
   "main": "dist/",
   "contributors": [
     {
@@ -71,7 +71,7 @@
     "react": "0.14"
   },
   "dependencies": {
-    "@schibstedspain/theme-basic": "5.9",
+    "@schibstedspain/theme-basic": "5",
     "classnames": "2.2.0"
   },
   "devDependencies": {
