@@ -2,38 +2,6 @@
   "name": "@schibstedspain/sui-card",
   "version": "7.2.1",
   "main": "dist/",
-  "contributors": [
-    {
-      "name": "Daniel de la Cruz",
-      "email": "daniel.delacruz@scmspain.com",
-      "url": "https://github.com/danderu"
-    },
-    {
-      "name": "David Garcia",
-      "email": "david.garcia@scmspain.com",
-      "url": "https://github.com/davecarter"
-    },
-    {
-      "name": "Carlos Villuendas",
-      "email": "carlos.villuendas@scmspain.com",
-      "url": "https://github.com/carlosvillu"
-    },
-    {
-      "name": "Joan Leon",
-      "email": "joan.leon@infojobs.net",
-      "url": "https://github.com/nucliweb"
-    },
-    {
-      "name": "Rubén Martín",
-      "email": "ruben.martin@scmspain.com",
-      "url": "https://github.com/ruben-martin-lozano"
-    },
-    {
-      "name": "Kiko Ruiz",
-      "email": "francisco.ruiz@scmspain.com",
-      "url": "https://github.com/kikoruiz"
-    }
-  ],
   "keywords": [
     "SUI-Components",
     "ReactJS",
@@ -68,11 +36,11 @@
     "test"
   ],
   "peerDependecies": {
-    "react": "0.14"
+    "react": "0.14 || 15"
   },
   "dependencies": {
     "@schibstedspain/theme-basic": "5",
-    "classnames": "2.2.0"
+    "classnames": "2.2.5"
   },
   "devDependencies": {
     "@schibstedspain/frontend-pre-commit-rules": "7.0",

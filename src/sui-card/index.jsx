@@ -2,9 +2,8 @@ import React, { PropTypes } from 'react'
 import cx from 'classnames'
 
 export default function SuiCard (props) {
-  const classNames = cx({
+  const classNames = cx(props.className, {
     'sui-Card': !props.className,
-    [`${props.className}`]: props.className,
     'sui-Card--landscape': props.landscapeLayout,
     'sui-Card--contentfirst': props.landscapeLayout && props.contentFirst
   })
@@ -25,9 +24,9 @@ export default function SuiCard (props) {
 }
 
 SuiCard.propTypes = {
-  landscapeLayout: PropTypes.bool,
+  className: PropTypes.string,
   contentFirst: PropTypes.bool,
+  landscapeLayout: PropTypes.bool,
   primary: PropTypes.any.isRequired,
-  secondary: PropTypes.any,
-  className: PropTypes.string
+  secondary: PropTypes.any
 }
