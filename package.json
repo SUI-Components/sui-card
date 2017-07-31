@@ -1,6 +1,6 @@
 {
   "name": "@schibstedspain/sui-card",
-  "version": "7.2.1",
+  "version": "7.2.2",
   "main": "dist/",
   "keywords": [
     "SUI-Components",
